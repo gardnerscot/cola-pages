@@ -26,6 +26,18 @@
   .highlight h3 { color: #f0f6fc; margin-bottom: 8px }
   .highlight p { color: #8b949e; font-size: 0.92rem }
   .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100% }
+  .email-signup { max-width: 440px; margin: 0 auto 60px; padding: 0 20px; text-align: center }
+  .email-signup h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
+  .email-signup p { color: #8b949e; font-size: 0.9rem; margin-bottom: 16px }
+  .email-signup form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap }
+  .email-signup input[type=email] { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; color: #c9d1d9; width: 260px }
+  .email-signup button { background: #7c3aed; color: #fff; border: none; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .2s }
+  .email-signup button:hover { background: #6d28d9 }
+  .other-products { max-width: 640px; margin: 0 auto 40px; padding: 0 20px; text-align: center }
+  .other-products h3 { color: #f0f6fc; margin-bottom: 12px }
+  .other-products .product-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+  .other-products a { color: #58a6ff; text-decoration: none; font-size: 0.92rem; padding: 6px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 20px; transition: border-color .2s }
+  .other-products a:hover { border-color: #58a6ff }
   @media (max-width: 700px) { .three-col { grid-template-columns: 1fr } }
 </style>
 </head>
@@ -67,6 +79,26 @@
   <div class="inner">
     <h3>💡 Why TalkBoard?</h3>
     <p>macOS 27 Spotlight handles launching. TalkBoard handles dictation, text polish, and clipboard. That's $96–120/year back in your pocket. Everything runs on-device — your voice, your text, your clipboard never leave your Mac.</p>
+  </div>
+</div>
+
+<div class="email-signup">
+  <h3>📬 Stay in the loop</h3>
+  <p>New apps, updates, and the occasional RV build log. No spam.</p>
+  <form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank">
+    <input type="email" name="email" placeholder="you@email.com" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+<div class="other-products">
+  <h3>More from SG1 Labs</h3>
+  <div class="product-links">
+    <a href="https://go.sg1-labs.us/products" target="_blank">🚀 ShipDrop</a>
+    <a href="https://go.sg1-labs.us/products" target="_blank">⏰ Tab Reminder</a>
+    <a href="https://go.sg1-labs.us/products" target="_blank">🛡️ Trial Guard</a>
+    <a href="https://go.sg1-labs.us/products" target="_blank">📅 Simple Calendar</a>
+    <a href="https://go.sg1-labs.us/products" target="_blank">🧹 SlopClean</a>
   </div>
 </div>
 
