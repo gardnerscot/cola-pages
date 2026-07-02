@@ -3,68 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TalkBoard — Dictation + Clipboard for Mac</title>
+<title>TalkBoard — Dictation + Quick Fix + Clipboard for Mac</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
-  .hero { text-align: center; padding: 80px 20px 40px; max-width: 600px }
+  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
   h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
   .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .anti { font-size: 0.95rem; color: #da3633; margin-bottom: 32px }
-  .download { display: inline-flex; align-items: center; gap: 10px; background: #7c3aed; color: #fff; border: none; padding: 14px 32px; font-size: 1.1rem; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 600; transition: background .2s }
-  .download:hover { background: #6d28d9 }
+  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 16px; font-weight: 600 }
+  .anti { font-size: 0.95rem; color: #da3633; margin-bottom: 28px }
+  .buy { display: inline-flex; align-items: center; gap: 10px; background: #f0a060; color: #0d1117; border: none; padding: 14px 32px; font-size: 1.1rem; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s }
+  .buy:hover { background: #e8923a }
   .version { font-size: 0.85rem; color: #8b949e; margin-top: 8px }
-  .hotkey { font-size: 0.85rem; color: #8b949e; margin-top: 4px }
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 700px; padding: 0 20px 60px }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px; text-align: center }
+  .badge-row { margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; max-width: 880px; padding: 0 20px 60px }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px 20px; text-align: center }
   .card .icon { font-size: 2.2rem; margin-bottom: 12px }
   .card h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.15rem }
   .card p { color: #8b949e; font-size: 0.92rem; line-height: 1.5 }
-  .raycast-box { max-width: 600px; margin: 0 auto 60px; padding: 0 20px; }
-  .raycast-box .inner { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; text-align: center }
-  .raycast-box h3 { color: #f0883e; margin-bottom: 8px }
-  .raycast-box p { color: #8b949e; font-size: 0.92rem }
+  .highlight { background: #161b22; border: 1px solid #30363d; border-radius: 12px; max-width: 600px; margin: 0 auto 60px; padding: 0 20px; }
+  .highlight .inner { padding: 24px; text-align: center }
+  .highlight h3 { color: #f0f6fc; margin-bottom: 8px }
+  .highlight p { color: #8b949e; font-size: 0.92rem }
   .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100% }
-  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr } }
+  @media (max-width: 700px) { .three-col { grid-template-columns: 1fr } }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <h1>🎤📋 TalkBoard</h1>
-  <p class="sub">Dictation + Clipboard Manager. The two Raycast Pro features you actually use.</p>
-  <p class="anti">One price. Forever. No $10/month.</p>
-  <a class="download" href="https://sg1-labs.us/TalkBoard-1.0.3r2.dmg">⬇ Download Free</a>
-  <p class="version">v1.0.3 · macOS 14+ (Apple Silicon) · Free trial</p>
-  <p class="hotkey">⌘⇧Space to dictate · Click menu bar for clipboard</p>
-  <p style="margin-top:20px">
+  <h1>🎤✨📋 TalkBoard</h1>
+  <p class="sub">Dictation. AI Quick Fix. Clipboard Manager.<br>The three Raycast Pro features you actually use.</p>
+  <p class="price">$9.99 — once. Forever.</p>
+  <p class="anti">No subscription. No $10/month. No cloud dependency.</p>
+  <a class="buy" href="https://scotlab.gumroad.com/l/talkboard">Buy on Gumroad — $9.99</a>
+  <p class="version">v1.0.3 · macOS 14+ (Apple Silicon)</p>
+  <div class="badge-row">
     <a href="https://launchstag.com" target="_blank" rel="noopener">
       <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
     </a>
-  </p>
+  </div>
 </div>
 
-<div class="two-col">
+<div class="three-col">
   <div class="card">
     <div class="icon">🎤</div>
     <h3>Dictation</h3>
-    <p>Press ⌘⇧Space, speak naturally, and your words appear in whatever app has focus. Apple on-device speech recognition — private, offline.</p>
+    <p>Press a hotkey, speak naturally, words appear wherever you're typing. Powered by whisper.cpp — fully on-device, private, works offline.</p>
+  </div>
+  <div class="card">
+    <div class="icon">✨</div>
+    <h3>Quick Fix</h3>
+    <p>Paste rough text, choose a tone — Formal, Friendly, Email, Bullets, or Raw — and let on-device AI polish it. No API keys required.</p>
   </div>
   <div class="card">
     <div class="icon">📋</div>
-    <h3>Clipboard Manager</h3>
-    <p>Never lose a copy again. Searchable history, favorites, one-click paste. Everything you've copied, right in your menu bar.</p>
+    <h3>Clipboard</h3>
+    <p>Never lose a copy. Searchable history, favorites, one-click paste. AES-256 encrypted, lives in your menu bar.</p>
   </div>
 </div>
 
-<div class="raycast-box">
+<div class="highlight">
   <div class="inner">
-    <h3>Ditch the Raycast Pro subscription</h3>
-    <p>macOS 27 Spotlight handles launching. TalkBoard handles dictation and clipboard. That's $96-120/year back in your pocket.</p>
+    <h3>💡 Why TalkBoard?</h3>
+    <p>macOS 27 Spotlight handles launching. TalkBoard handles dictation, text polish, and clipboard. That's $96–120/year back in your pocket. Everything runs on-device — your voice, your text, your clipboard never leave your Mac.</p>
   </div>
 </div>
 
 <div class="footer">
+  <a href="https://scotlab.gumroad.com/l/talkboard" style="color:#f0a060; font-weight:600">Buy on Gumroad — $9.99</a><br><br>
   Made by <a href="https://sg1-labs.us" style="color:#58a6ff">SG1 Labs</a> · 
   <a href="https://go.sg1-labs.us/tab-reminder-privacy" style="color:#58a6ff">Privacy</a> · 
   Built from an RV 🚐
