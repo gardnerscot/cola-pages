@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — SG1 Labs</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
+  .hero { text-align: center; padding: 60px 20px 30px; max-width: 600px }
+  h1 { font-size: 2rem; color: #f0f6fc; margin-bottom: 8px }
+  .tagline { color: #8b949e; font-size: 1rem; margin-bottom: 40px }
+  .products { max-width: 640px; padding: 0 20px 60px; display: flex; flex-direction: column; gap: 16px }
+  .product { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; text-decoration: none; transition: border-color .2s }
+  .product:hover { border-color: #58a6ff }
+  .product .icon { font-size: 1.8rem; flex-shrink: 0 }
+  .product .info { flex: 1 }
+  .product h3 { color: #f0f6fc; font-size: 1.05rem; margin-bottom: 4px }
+  .product p { color: #8b949e; font-size: 0.88rem; line-height: 1.4 }
+  .product .price { color: #56d364; font-size: 0.85rem; font-weight: 600; margin-left: auto; white-space: nowrap }
+  .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100% }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🛠️ SG1 Labs</h1>
+  <p class="tagline">Small, useful Mac apps. One price. No subscriptions.</p>
+</div>
+
+<div class="products">
+  <a class="product" href="/talkboard/">
+    <span class="icon">🎤</span>
+    <div class="info">
+      <h3>TalkBoard</h3>
+      <p>Dictation + AI Quick Fix + Clipboard Manager. On-device, private, offline.</p>
+    </div>
+    <span class="price">$9.99</span>
+  </a>
+  <a class="product" href="https://scotlab.gumroad.com/l/shipdrop" target="_blank">
+    <span class="icon">🚀</span>
+    <div class="info">
+      <h3>ShipDrop</h3>
+      <p>Drag, drop, deploy. Ship projects to the web in seconds.</p>
+    </div>
+    <span class="price">$9.99/mo</span>
+  </a>
+  <a class="product" href="https://scotlab.gumroad.com/l/tab-reminder" target="_blank">
+    <span class="icon">⏰</span>
+    <div class="info">
+      <h3>Tab Reminder</h3>
+      <p>Never lose a tab again. Set reminders on any browser tab.</p>
+    </div>
+    <span class="price">$4.99</span>
+  </a>
+  <a class="product" href="https://scotlab.gumroad.com/l/trial-guard" target="_blank">
+    <span class="icon">🛡️</span>
+    <div class="info">
+      <h3>Trial Guard</h3>
+      <p>Track free trials. Never get charged for something you forgot to cancel.</p>
+    </div>
+    <span class="price">$0.99</span>
+  </a>
+  <a class="product" href="https://scotlab.gumroad.com/l/slopclean" target="_blank">
+    <span class="icon">🧹</span>
+    <div class="info">
+      <h3>SlopClean</h3>
+      <p>Clean AI-generated code. Remove hallucinations, fix formatting, make it human.</p>
+    </div>
+    <span class="price">$9.99</span>
+  </a>
+  <a class="product" href="https://scotlab.gumroad.com/l/simple-calendar" target="_blank">
+    <span class="icon">📅</span>
+    <div class="info">
+      <h3>Simple Calendar</h3>
+      <p>Just the date. Nothing else. Lives in your menu bar.</p>
+    </div>
+    <span class="price">Free</span>
+  </a>
+</div>
+
+<div class="footer">
+  Made by <a href="https://sg1-labs.us" style="color:#58a6ff">SG1 Labs</a> · Built from an RV 🚐
+</div>
+
+</body>
+</html>
