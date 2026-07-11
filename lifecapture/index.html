@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeCapture — Auto-organize screenshots, receipts & voice memos</title>
+<meta name="description" content="LifeCapture pulls screenshots, receipts, voice memos, and notes into one place. On-device AI auto-sorts everything into buckets. Free on the App Store." />
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/lifecapture/" />
+<style>
+  * { margin:0; padding:0; box-sizing:border-box }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
+  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
+  .icon { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(99,102,241,0.3) }
+  h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
+  .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
+  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 8px; font-weight: 600 }
+  .anti { font-size: 0.95rem; color: #8b949e; margin-bottom: 28px }
+  .download-btn { display: inline-flex; align-items: center; gap: 8px; background: #6366f1; color: #fff; border: none; padding: 14px 28px; font-size: 1.05rem; border-radius: 12px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s, transform .2s }
+  .download-btn:hover { background: #4f46e5; transform: translateY(-1px) }
+  .section-title { text-align: center; font-size: 1.8rem; color: #f0f6fc; margin: 60px 0 32px }
+  .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 880px; padding: 0 20px }
+  .feature { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px 20px; text-align: center }
+  .feature .icon-emoji { font-size: 2rem; margin-bottom: 12px }
+  .feature h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
+  .feature p { color: #8b949e; font-size: 0.9rem; line-height: 1.5 }
+  .compare-section { max-width: 700px; padding: 0 20px; width: 100% }
+  .compare-table { width: 100%; border-collapse: collapse; margin: 0 auto; font-size: 0.92rem }
+  .compare-table th { text-align: left; padding: 12px 16px; border-bottom: 1px solid #30363d; color: #f0f6fc }
+  .compare-table td { padding: 10px 16px; border-bottom: 1px solid #21262d }
+  .compare-table .yes { color: #56d364 }
+  .compare-table .no { color: #484f58 }
+  .bucket-section { max-width: 880px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 60px }
+  .bucket { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; text-align: center }
+  .bucket .bucket-icon { font-size: 1.6rem; margin-bottom: 6px }
+  .bucket h4 { color: #f0f6fc; font-size: 0.95rem; margin-bottom: 4px }
+  .bucket p { color: #8b949e; font-size: 0.82rem }
+  .footer { text-align: center; padding: 40px 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100%; margin-top: 60px }
+  .footer a { color: #58a6ff }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; margin-left: 6px }
+  .badge-pro { background: #6366f1; color: #fff }
+  .badge-free { background: #21262d; color: #8b949e }
+  @media (max-width: 700px) { .feature-grid, .bucket-section { grid-template-columns: 1fr } .compare-table { font-size: 0.82rem } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img class="icon" src="appicon.png" alt="LifeCapture" />
+  <h1>LifeCapture</h1>
+  <p class="sub">Screenshots. Receipts. Voice memos. Notes.<br>One inbox. Auto-sorted. On-device.</p>
+  <p class="price">Free on the App Store &nbsp;·&nbsp; Pro $9.99 one-time</p>
+  <p class="anti">No subscription. No cloud uploads. Your stuff stays on your phone.</p>
+  <a class="download-btn" href="#">Coming to the App Store</a>
+</div>
+
+<h2 class="section-title">Capture Everything. Find Anything.</h2>
+
+<div class="feature-grid">
+  <div class="feature">
+    <div class="icon-emoji">📸</div>
+    <h3>Screenshot Import</h3>
+    <p>Grab recent screenshots from Photos. Auto-classified as Projects, Reference, or Tasks.</p>
+  </div>
+  <div class="feature">
+    <div class="icon-emoji">🧾</div>
+    <h3>Receipt Scanner</h3>
+    <p>Built-in document scanner with on-device OCR. Receipts go straight to Expenses.</p>
+  </div>
+  <div class="feature">
+    <div class="icon-emoji">🎙️</div>
+    <h3>Voice Memos</h3>
+    <p>Import audio files, transcribe with on-device Speech recognition. Filed as Tasks automatically.</p>
+  </div>
+  <div class="feature">
+    <div class="icon-emoji">🤖</div>
+    <h3>AI Classifier</h3>
+    <p>On-device AI reads your captures and files them into the right bucket. No cloud. No API keys.</p>
+  </div>
+  <div class="feature">
+    <div class="icon-emoji">🔍</div>
+    <h3>Smart Search <span class="badge badge-pro">PRO</span></h3>
+    <p>"Receipt from last month" — natural language search with on-device embeddings. Find anything instantly.</p>
+  </div>
+  <div class="feature">
+    <div class="icon-emoji">📤</div>
+    <h3>Batch Export <span class="badge badge-pro">PRO</span></h3>
+    <p>Expenses → CSV for taxes. Projects → Markdown. Select, export, done.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Six Smart Buckets</h2>
+
+<div class="bucket-section">
+  <div class="bucket"><div class="bucket-icon">📥</div><h4>Inbox</h4><p>Unsorted, auto-filed later</p></div>
+  <div class="bucket"><div class="bucket-icon">💳</div><h4>Expenses</h4><p>Receipts & totals</p></div>
+  <div class="bucket"><div class="bucket-icon">💻</div><h4>Projects</h4><p>Work, code, designs</p></div>
+  <div class="bucket"><div class="bucket-icon">✅</div><h4>Tasks</h4><p>Voice notes & actions</p></div>
+  <div class="bucket"><div class="bucket-icon">📖</div><h4>Reference</h4><p>Notes to keep</p></div>
+  <div class="bucket"><div class="bucket-icon">📦</div><h4>Archive</h4><p>Done & ignored</p></div>
+</div>
+
+<h2 class="section-title">Free vs Pro</h2>
+
+<div class="compare-section">
+<table class="compare-table">
+  <tr><th>Feature</th><th>Free</th><th>Pro <span class="badge badge-pro">$9.99</span></th></tr>
+  <tr><td>Screenshot import</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+  <tr><td>Receipt scanner + OCR</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+  <tr><td>Voice memo transcription</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+  <tr><td>AI auto-classifier</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+  <tr><td>6 default buckets</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+  <tr><td>Custom buckets + rules</td><td class="no">—</td><td class="yes">✅</td></tr>
+  <tr><td>Smart Search (NL + embeddings)</td><td class="no">—</td><td class="yes">✅</td></tr>
+  <tr><td>Batch select + export</td><td class="no">—</td><td class="yes">✅</td></tr>
+  <tr><td>Export CSV / Markdown</td><td class="no">—</td><td class="yes">✅</td></tr>
+  <tr><td>Auto-reminders</td><td class="no">—</td><td class="yes">✅</td></tr>
+  <tr><td>Widgets</td><td class="no">—</td><td class="yes">✅</td></tr>
+</table>
+</div>
+
+<div class="footer">
+  Made by <a href="https://sg1-labs.us">SG1 Labs</a> · Built from an RV 🚐<br>
+  <a href="https://gardnerscot.github.io/cola-pages/products/">← Back to all products</a>
+</div>
+
+</body>
+</html>
