@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVANGIA Customs — 1-of-1 Streetwear from Recycled Fabric</title>
+<meta name="description" content="EVANGIA Customs turns vintage quilts, cross-stitch, and recycled fabrics into one-of-one streetwear. Custom inquiries open — South Side Chicago & Michigan." />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box }
+  body { font-family: 'Space Grotesk', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; overflow-x: hidden }
+  
+  /* Hero */
+  .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; position: relative; background: radial-gradient(ellipse at 30% 50%, rgba(120,80,40,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(40,40,60,0.2) 0%, transparent 50%), #0a0a0a }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: #f5f0eb; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px }
+  .hero h1 span { display: block; font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 400; color: #a89070; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px }
+  .hero .tagline { font-size: 1.15rem; color: #888; max-width: 500px; line-height: 1.6; margin-bottom: 12px }
+  .hero .hook { font-size: 1.05rem; color: #a89070; max-width: 480px; line-height: 1.5; font-style: italic }
+
+  /* Marquee */
+  .marquee { overflow: hidden; white-space: nowrap; padding: 12px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; background: #0d0d0d }
+  .marquee-inner { display: inline-block; animation: scroll 20s linear infinite }
+  .marquee span { color: #a89070; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 40px }
+  @keyframes scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: #1a1a1a; padding: 2px }
+  .gallery img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; transition: opacity 0.3s }
+  .gallery img:hover { opacity: 0.85 }
+
+  /* Story section */
+  .story { max-width: 700px; margin: 80px auto; padding: 0 24px; text-align: center }
+  .story h2 { font-size: 1.8rem; color: #f5f0eb; margin-bottom: 24px }
+  .story p { color: #999; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px }
+  .story .highlight { color: #a89070; font-style: italic }
+
+  /* Process cards */
+  .process { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto 80px; padding: 0 24px }
+  .process-card { background: #111; border: 1px solid #1a1a1a; border-radius: 2px; padding: 32px 24px; text-align: center }
+  .process-card .icon { font-size: 2rem; margin-bottom: 16px }
+  .process-card h3 { color: #f5f0eb; font-size: 1.1rem; margin-bottom: 8px }
+  .process-card p { color: #777; font-size: 0.92rem; line-height: 1.5 }
+
+  /* Quote */
+  .quote { max-width: 640px; margin: 0 auto 80px; padding: 40px 24px; text-align: center; border-left: 3px solid #a89070; background: #111 }
+  .quote p { font-size: 1.15rem; color: #ccc; line-height: 1.7; font-style: italic }
+
+  /* Inquire */
+  .inquire { max-width: 500px; margin: 0 auto 100px; padding: 0 24px; text-align: center }
+  .inquire h2 { font-size: 1.6rem; color: #f5f0eb; margin-bottom: 12px }
+  .inquire p { color: #888; margin-bottom: 32px; line-height: 1.6 }
+  .inquire a.cta { display: inline-block; background: #a89070; color: #0a0a0a; padding: 16px 40px; font-size: 1rem; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; transition: background 0.2s }
+  .inquire a.cta:hover { background: #c4a882 }
+  .inquire .alt { margin-top: 16px; font-size: 0.88rem }
+  .inquire .alt a { color: #a89070; text-decoration: none }
+
+  /* Footer */
+  .footer { text-align: center; padding: 40px 20px; border-top: 1px solid #1a1a1a; color: #555; font-size: 0.85rem; line-height: 1.8 }
+  .footer strong { color: #888 }
+  .footer a { color: #a89070; text-decoration: none }
+
+  @media (max-width: 600px) {
+    .hero { min-height: 70vh }
+    .gallery { grid-template-columns: 1fr 1fr }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1><span>EVANGIA Customs</span>1-of-1 Streetwear<br>from Recycled Fabric</h1>
+  <p class="tagline">South Side Chicago &bull; Michigan</p>
+  <p class="hook">Your grandmother's unfinished quilt deserves better than a box in the attic.</p>
+</div>
+
+<div class="marquee">
+  <div class="marquee-inner">
+    <span>Recycled Quilts</span><span>Cross-Stitch</span><span>Woven Textiles</span><span>1-of-1</span><span>Custom Streetwear</span><span>Vintage Fabric</span><span>EVANGIA Customs</span>
+    <span>Recycled Quilts</span><span>Cross-Stitch</span><span>Woven Textiles</span><span>1-of-1</span><span>Custom Streetwear</span><span>Vintage Fabric</span><span>EVANGIA Customs</span>
+  </div>
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<div class="story">
+  <h2>Something Old Becomes Something You Wear</h2>
+  <p>Most custom clothing starts with blank fabric. EVANGIA starts with what's already in your life — <span class="highlight">vintage quilts, unfinished cross-stitch, woven blankets, recycled textiles</span> — and turns them into hoodies, shirts, and jackets you'll reach for every day.</p>
+  <p>That half-finished quilt your grandmother was working on? That's not scrap. That's the centerpiece of a hoodie that keeps her close — literally on your back.</p>
+</div>
+
+<div class="process">
+  <div class="process-card">
+    <div class="icon">🧵</div>
+    <h3>Your Fabric</h3>
+    <p>Send the quilt, blanket, or textile that matters. The one sitting in a closet because you don't know what to do with it.</p>
+  </div>
+  <div class="process-card">
+    <div class="icon">✂️</div>
+    <h3>Custom Design</h3>
+    <p>We work out the piece together — hoodie, shirt, jacket. Placement. Fit. How much of the original pattern shows.</p>
+  </div>
+  <div class="process-card">
+    <div class="icon">🧥</div>
+    <h3>One of One</h3>
+    <p>Every piece is cut and sewn by hand. No two are the same. No templates. Just your fabric and the shape it wants to be.</p>
+  </div>
+</div>
+
+<div class="quote">
+  <p>&ldquo;This hoodie has mine and Riley's vows sewn into the shoulder. Nobody knows it's there but us.&rdquo;</p>
+</div>
+
+<div class="inquire">
+  <h2>Inquire About a Custom Piece</h2>
+  <p>Every project starts with a conversation. Tell me what you have and what you're imagining.</p>
+  <a class="cta" href="mailto:cane@evangiacustoms.com">Start Your Project</a>
+  <p class="alt">or DM on Instagram: <a href="https://instagram.com/EVANGIA.GIO">@EVANGIA.GIO</a></p>
+  <p class="alt" style="margin-top:8px">or call: <a href="tel:+12693040028">269.304.0028</a></p>
+</div>
+
+<div class="footer">
+  <strong>EVANGIA Customs, LLC</strong><br>
+  Cane Giovanni Elder &mdash; Founder / Designer<br>
+  South Side Chicago &bull; Michigan<br>
+  <a href="https://instagram.com/EVANGIA.GIO">@EVANGIA.GIO</a>
+</div>
+
+<script>
+// Gallery images - replace with actual hosted image URLs
+const images = [
+  'IMG_1792.jpeg', 'IMG_1791.jpeg', 'IMG_1790.jpeg',
+  'IMG_1616.jpeg', 'IMG_1611.jpeg', 'IMG_7117.jpeg',
+  'IMG_1472.jpeg', 'IMG_1471.jpeg', 'IMG_1457.jpeg',
+  'IMG_1228.jpeg', 'IMG_1227.jpeg', 'IMG_1195.jpeg',
+  'IMG_1010.jpeg', 'IMG_1009.jpeg', 'IMG_1008.jpeg'
+];
+
+const gallery = document.getElementById('gallery');
+images.forEach(img => {
+  const el = document.createElement('img');
+  el.src = `images/${img}`;
+  el.alt = 'EVANGIA Customs piece';
+  el.loading = 'lazy';
+  gallery.appendChild(el);
+});
+</script>
+
+</body>
+</html>
