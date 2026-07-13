@@ -6,15 +6,14 @@
 <title>EVANGIA Customs — 1-of-1 Streetwear from Recycled Fabric</title>
 <meta name="description" content="EVANGIA Customs turns vintage quilts, cross-stitch, and recycled fabrics into one-of-one streetwear. Custom inquiries open — South Side Chicago & Michigan." />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=UnifrakturCook:wght@700&family=Space+Grotesk:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Space+Mono:ital@0;1&family=Space+Grotesk:wght@400;600;700&display=swap');
 
   * { margin:0; padding:0; box-sizing:border-box }
   body { font-family: 'Space Grotesk', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; overflow-x: hidden }
-  .gothic { font-family: 'UnifrakturCook', cursive }
   
   /* Hero */
   .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; position: relative; background: radial-gradient(ellipse at 30% 50%, rgba(120,80,40,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(40,40,60,0.2) 0%, transparent 50%), #0a0a0a }
-  .hero h1 { font-family: 'UnifrakturCook', cursive; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: #f5f0eb; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 16px }
+  .hero h1 { font-family: 'New Rocker', cursive; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: #f5f0eb; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 16px }
   .hero h1 span { font-family: 'New Rocker', cursive; display: block; font-size: clamp(1.4rem, 3.5vw, 1.8rem); font-weight: 400; color: #a89070; letter-spacing: 0.04em; margin-bottom: 8px }
   .hero .tagline { font-size: 1.15rem; color: #888; max-width: 500px; line-height: 1.6; margin-bottom: 12px }
   .hero .hook { font-size: 1.05rem; color: #a89070; max-width: 480px; line-height: 1.5; font-style: italic }
@@ -22,7 +21,7 @@
   /* Marquee */
   .marquee { overflow: hidden; white-space: nowrap; padding: 12px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; background: #0d0d0d }
   .marquee-inner { display: inline-block; animation: scroll 20s linear infinite }
-  .marquee-inner span { font-family: 'UnifrakturCook', cursive; color: #a89070; font-size: 1rem; letter-spacing: 0.05em; text-transform: none; margin: 0 40px }
+  .marquee-inner span { font-family: 'New Rocker', cursive; color: #a89070; font-size: 1rem; letter-spacing: 0.05em; text-transform: none; margin: 0 40px }
   @keyframes scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
 
   /* Gallery */
@@ -32,7 +31,8 @@
 
   /* Story section */
   .story { max-width: 700px; margin: 80px auto; padding: 0 24px; text-align: center }
-  .story h2 { font-family: 'UnifrakturCook', cursive; font-size: 2.2rem; color: #f5f0eb; margin-bottom: 24px }
+  .story h2 { font-family: 'New Rocker', cursive; font-size: 2.2rem; color: #f5f0eb; margin-bottom: 24px; position: relative; display: inline-block }
+  .story h2::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 3px; background: #a89070; border-radius: 1px; opacity: 0.7 }
   .story p { color: #999; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px }
   .story .highlight { color: #a89070; font-style: italic }
 
@@ -40,16 +40,18 @@
   .process { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto 80px; padding: 0 24px }
   .process-card { background: #111; border: 1px solid #1a1a1a; border-radius: 2px; padding: 32px 24px; text-align: center }
   .process-card .icon { font-size: 2rem; margin-bottom: 16px }
-  .process-card h3 { color: #f5f0eb; font-size: 1.1rem; margin-bottom: 8px }
+  .process-card h3 { font-family: 'New Rocker', cursive; color: #f5f0eb; font-size: 1.3rem; margin-bottom: 12px; position: relative; display: inline-block }
+  .process-card h3::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background: #a89070; opacity: 0.5 }
   .process-card p { color: #777; font-size: 0.92rem; line-height: 1.5 }
 
   /* Quote */
   .quote { max-width: 640px; margin: 0 auto 80px; padding: 40px 24px; text-align: center; border-left: 3px solid #a89070; background: #111 }
-  .quote p { font-size: 1.15rem; color: #ccc; line-height: 1.7; font-style: italic }
+  .quote p { font-family: 'Space Mono', monospace; font-size: 1rem; color: #ccc; line-height: 1.8; font-style: italic }
 
   /* Inquire */
   .inquire { max-width: 500px; margin: 0 auto 100px; padding: 0 24px; text-align: center }
-  .inquire h2 { font-family: 'UnifrakturCook', cursive; font-size: 2rem; color: #f5f0eb; margin-bottom: 12px }
+  .inquire h2 { font-family: 'New Rocker', cursive; font-size: 2rem; color: #f5f0eb; margin-bottom: 12px; position: relative; display: inline-block }
+  .inquire h2::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 3px; background: #a89070; border-radius: 1px; opacity: 0.7 }
   .inquire p { color: #888; margin-bottom: 32px; line-height: 1.6 }
   .inquire a.cta { display: inline-block; background: #a89070; color: #0a0a0a; padding: 16px 40px; font-size: 1rem; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; transition: background 0.2s }
   .inquire a.cta:hover { background: #c4a882 }
@@ -88,14 +90,14 @@
   <h2>Something Old Becomes Something You Wear</h2>
   <p>Most custom clothing starts with blank fabric. EVANGIA starts with what's already in your life — <span class="highlight">vintage quilts, unfinished cross-stitch, woven blankets, recycled textiles</span> — and turns them into hoodies, sweatpants, shirts, jackets, and shorts you'll reach for every day.</p>
   <p>That half-finished quilt your grandmother was working on? That's not scrap. That's the centerpiece of a hoodie that keeps her close — literally on your back.</p>
-  <p>Don't have a sentimental piece to send? No problem. Cane works from <span class="highlight">thrifted fabrics and vintage pieces</span> too — tell him the vibe you want and he'll source, cut, and rework everything from scratch. Every piece is still one of one.</p>
+  <p>Don't have a sentimental piece to send? No problem. Gio works from <span class="highlight">thrifted fabrics and vintage pieces</span> too — share the vibe and he'll source, cut, and rework everything from scratch. Every piece is still one of one.</p>
 </div>
 
 <div class="process">
   <div class="process-card">
     <div class="icon">01</div>
     <h3>Your Fabric (or Mine)</h3>
-    <p>Send the quilt, blanket, or textile that matters. Or just share your vision — Cane sources thrifted and vintage fabrics, then cuts and reworks everything by hand.</p>
+    <p>Send the quilt, blanket, or textile that matters. Or just share your vision — Gio sources thrifted and vintage fabrics, then cuts and reworks everything by hand.</p>
   </div>
   <div class="process-card">
     <div class="icon">02</div>
@@ -123,7 +125,7 @@
 
 <div class="footer">
   <strong>EVANGIA Customs, LLC</strong><br>
-  Cane Giovanni Elder &mdash; Founder / Designer<br>
+  Gio Giovanni Elder &mdash; Founder / Designer<br>
   South Side Chicago &bull; Michigan<br>
   <a href="https://instagram.com/EVANGIA.GIO">@EVANGIA.GIO</a>
 </div>
