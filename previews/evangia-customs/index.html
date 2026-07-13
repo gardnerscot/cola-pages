@@ -6,22 +6,23 @@
 <title>EVANGIA Customs — 1-of-1 Streetwear from Recycled Fabric</title>
 <meta name="description" content="EVANGIA Customs turns vintage quilts, cross-stitch, and recycled fabrics into one-of-one streetwear. Custom inquiries open — South Side Chicago & Michigan." />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Space+Grotesk:wght@400;600;700&display=swap');
 
   * { margin:0; padding:0; box-sizing:border-box }
   body { font-family: 'Space Grotesk', -apple-system, sans-serif; background: #0a0a0a; color: #e0e0e0; overflow-x: hidden }
+  .gothic { font-family: 'UnifrakturCook', cursive }
   
   /* Hero */
   .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; position: relative; background: radial-gradient(ellipse at 30% 50%, rgba(120,80,40,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(40,40,60,0.2) 0%, transparent 50%), #0a0a0a }
-  .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: #f5f0eb; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px }
-  .hero h1 span { display: block; font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 400; color: #a89070; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px }
+  .hero h1 { font-family: 'UnifrakturCook', cursive; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: #f5f0eb; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 16px }
+  .hero h1 span { font-family: 'UnifrakturCook', cursive; display: block; font-size: clamp(1.4rem, 3.5vw, 1.8rem); font-weight: 400; color: #a89070; letter-spacing: 0.04em; margin-bottom: 8px }
   .hero .tagline { font-size: 1.15rem; color: #888; max-width: 500px; line-height: 1.6; margin-bottom: 12px }
   .hero .hook { font-size: 1.05rem; color: #a89070; max-width: 480px; line-height: 1.5; font-style: italic }
 
   /* Marquee */
   .marquee { overflow: hidden; white-space: nowrap; padding: 12px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; background: #0d0d0d }
   .marquee-inner { display: inline-block; animation: scroll 20s linear infinite }
-  .marquee span { color: #a89070; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 40px }
+  .marquee-inner span { font-family: 'UnifrakturCook', cursive; color: #a89070; font-size: 1rem; letter-spacing: 0.05em; text-transform: none; margin: 0 40px }
   @keyframes scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
 
   /* Gallery */
@@ -31,7 +32,7 @@
 
   /* Story section */
   .story { max-width: 700px; margin: 80px auto; padding: 0 24px; text-align: center }
-  .story h2 { font-size: 1.8rem; color: #f5f0eb; margin-bottom: 24px }
+  .story h2 { font-family: 'UnifrakturCook', cursive; font-size: 2.2rem; color: #f5f0eb; margin-bottom: 24px }
   .story p { color: #999; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px }
   .story .highlight { color: #a89070; font-style: italic }
 
@@ -48,7 +49,7 @@
 
   /* Inquire */
   .inquire { max-width: 500px; margin: 0 auto 100px; padding: 0 24px; text-align: center }
-  .inquire h2 { font-size: 1.6rem; color: #f5f0eb; margin-bottom: 12px }
+  .inquire h2 { font-family: 'UnifrakturCook', cursive; font-size: 2rem; color: #f5f0eb; margin-bottom: 12px }
   .inquire p { color: #888; margin-bottom: 32px; line-height: 1.6 }
   .inquire a.cta { display: inline-block; background: #a89070; color: #0a0a0a; padding: 16px 40px; font-size: 1rem; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; transition: background 0.2s }
   .inquire a.cta:hover { background: #c4a882 }
