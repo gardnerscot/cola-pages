@@ -8,16 +8,28 @@
 <link rel="canonical" href="https://gardnerscot.github.io/cola-pages/slopclean/" />
 <style>
   * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center; text-align: center }
-  .hero { padding: 80px 20px 40px; max-width: 600px }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
+  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
   h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
   .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 28px; font-weight: 600 }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 32px 24px; max-width: 500px; margin: 0 20px 40px }
+  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 16px; font-weight: 600 }
+  .btn { display: inline-block; background: #7c3aed; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background .2s }
+  .btn:hover { background: #6d28d9 }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 32px 24px; max-width: 500px; margin: 0 20px 40px; text-align: center }
   .card h3 { color: #f0f6fc; margin-bottom: 12px; font-size: 1.15rem }
   .card p { color: #8b949e; font-size: 0.95rem; line-height: 1.6 }
-  .btn { display: inline-block; background: #7c3aed; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 8px; transition: background .2s }
-  .btn:hover { background: #6d28d9 }
+  .email-signup { max-width: 440px; margin: 0 auto 60px; padding: 0 20px; text-align: center }
+  .email-signup h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
+  .email-signup p { color: #8b949e; font-size: 0.9rem; margin-bottom: 16px }
+  .email-signup form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap }
+  .email-signup input[type=email] { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; color: #c9d1d9; width: 260px }
+  .email-signup button { background: #7c3aed; color: #fff; border: none; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .2s }
+  .email-signup button:hover { background: #6d28d9 }
+  .other-products { max-width: 640px; margin: 0 auto 40px; padding: 0 20px; text-align: center }
+  .other-products h3 { color: #f0f6fc; margin-bottom: 12px }
+  .other-products .product-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+  .other-products a { color: #58a6ff; text-decoration: none; font-size: 0.92rem; padding: 6px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 20px; transition: border-color .2s }
+  .other-products a:hover { border-color: #58a6ff }
   .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100%; margin-top: auto }
   .footer a { color: #58a6ff; text-decoration: none }
 </style>
@@ -28,16 +40,37 @@
   <h1>🧹✨ SlopClean</h1>
   <p class="sub">Clean up AI-generated spaghetti code into maintainable architecture. One click.</p>
   <p class="price">$9.99</p>
+  <a class="btn" href="https://pypi.org/project/slopclean/">pip install slopclean</a>
 </div>
 
 <div class="card">
   <h3>Stop Massaging AI Output</h3>
   <p>You love vibe-coding. You hate the cleanup. SlopClean takes AI-generated code and turns it into clean, modular, maintainable architecture — so you can ship instead of refactor.</p>
-  <a class="btn" href="https://pypi.org/project/slopclean/">pip install slopclean</a>
+</div>
+
+<div class="email-signup">
+  <h3>📬 Stay in the loop</h3>
+  <p>New apps, updates, and the occasional RV build log. No spam.</p>
+  <form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank">
+    <input type="email" name="email" placeholder="you@email.com" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+<div class="other-products">
+  <h3>More from SG1 Labs</h3>
+  <div class="product-links">
+    <a href="https://go.sg1-labs.us/shipdrop">🚀 ShipDrop</a>
+    <a href="https://go.sg1-labs.us/tab-reminder">⏰ Tab Reminder</a>
+    <a href="https://go.sg1-labs.us/trialguard">🛡️ Trial Guard</a>
+    <a href="https://go.sg1-labs.us/simple-calendar">📅 Simple Calendar</a>
+    <a href="https://go.sg1-labs.us/agentx">🔍 AgentX</a>
+  </div>
 </div>
 
 <div class="footer">
-  <a href="https://gardnerscot.github.io/cola-pages/products/">← All SG1 Labs Products</a>
+  Made by <a href="https://sg1-labs.us">SG1 Labs</a> · 
+  Built from an RV 🚐
 </div>
 
 </body>
