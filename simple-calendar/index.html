@@ -1,79 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Calendar — Wall Calendar for Your Mac</title>
-<meta name="description" content="A wall calendar for your Mac. No events, no sync, no notifications. Just the date. Free." />
-<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/simple-calendar/" />
-<style>
-  * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
-  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
-  h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
-  .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 16px; font-weight: 600 }
-  .anti { font-size: 0.95rem; color: #da3633; margin-bottom: 28px }
-  .buy { display: inline-flex; align-items: center; gap: 10px; background: #f0a060; color: #0d1117; border: none; padding: 14px 32px; font-size: 1.1rem; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s }
-  .buy:hover { background: #e8923a }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 32px 24px; max-width: 500px; margin: 0 20px 40px; text-align: center }
-  .card h3 { color: #f0f6fc; margin-bottom: 12px; font-size: 1.15rem }
-  .card p { color: #8b949e; font-size: 0.95rem; line-height: 1.6 }
-  .email-signup { max-width: 440px; margin: 0 auto 60px; padding: 0 20px; text-align: center }
-  .email-signup h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
-  .email-signup p { color: #8b949e; font-size: 0.9rem; margin-bottom: 16px }
-  .email-signup form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap }
-  .email-signup input[type=email] { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; color: #c9d1d9; width: 260px }
-  .email-signup button { background: #7c3aed; color: #fff; border: none; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .2s }
-  .email-signup button:hover { background: #6d28d9 }
-  .other-products { max-width: 640px; margin: 0 auto 40px; padding: 0 20px; text-align: center }
-  .other-products h3 { color: #f0f6fc; margin-bottom: 12px }
-  .other-products .product-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
-  .other-products a { color: #58a6ff; text-decoration: none; font-size: 0.92rem; padding: 6px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 20px; transition: border-color .2s }
-  .other-products a:hover { border-color: #58a6ff }
-  .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100%; margin-top: auto }
-  .footer a { color: #58a6ff; text-decoration: none }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple Calendar — The date, without the noise.</title>
+<meta name="description" content="A quiet wall calendar for your Mac. No events, sync, or notifications. Just the date.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/simple-calendar/">
+<link rel="stylesheet" href="../product-pages.css">
+<style>:root { --accent: #6b8f71; --accent-dark: #3e6047; --accent-soft: #dfe9df; --signal: #c7d96b; }</style>
 </head>
 <body>
-
-<div class="hero">
-  <h1>📅 Simple Calendar</h1>
-  <p class="sub">A wall calendar for your Mac. No events, no sync, no notifications. Just the date.</p>
-  <p class="price">Free</p>
-  <p class="anti">No in-app purchases. No ads. No catch.</p>
-  <a class="buy" href="https://go.sg1-labs.us/products">Download Free</a>
-</div>
-
-<div class="card">
-  <h3>Why?</h3>
-  <p>Sometimes you just need to know what day it is. No Google Calendar sync, no iCloud, no meeting reminders. A wall calendar that lives in your menu bar — the way calendars used to work.</p>
-</div>
-
-<div class="email-signup">
-  <h3>📬 Stay in the loop</h3>
-  <p>New apps, updates, and the occasional RV build log. No spam.</p>
-  <form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank">
-    <input type="email" name="email" placeholder="you@email.com" required />
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
-
-<div class="other-products">
-  <h3>More from SG1 Labs</h3>
-  <div class="product-links">
-    <a href="https://go.sg1-labs.us/shipdrop">🚀 ShipDrop</a>
-    <a href="https://go.sg1-labs.us/tab-reminder">⏰ Tab Reminder</a>
-    <a href="https://go.sg1-labs.us/trialguard">🛡️ Trial Guard</a>
-    <a href="https://go.sg1-labs.us/slopclean">🧹 SlopClean</a>
-    <a href="https://go.sg1-labs.us/agentx">🔍 AgentX</a>
-  </div>
-</div>
-
-<div class="footer">
-  Made by <a href="https://sg1-labs.us">SG1 Labs</a> · 
-  Built from an RV 🚐
-</div>
-
+<div class="page-shell">
+<header class="site-header"><a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a><a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="hero">
+<div><span class="kicker">A quiet utility for your Mac</span><h1>Simple Calendar</h1><p class="lede">The date, without the noise.</p><div class="hero-actions"><a class="button" href="https://go.sg1-labs.us/products">Download free</a><a class="button secondary" href="#details">Why so simple?</a></div><p class="price-note">Free · macOS · No accounts · No ads</p></div>
+<div class="product-mark" aria-label="Simple Calendar product mark"><div class="mark-inner"><span class="mark-symbol" aria-hidden="true">31</span><span class="mark-name">today<br>is enough.</span><span class="mark-caption">a wall calendar for your Mac</span></div></div>
+</section>
+<section class="section" id="details"><div class="section-heading"><h2>Not every calendar needs your life.</h2><p class="section-note">Simple Calendar shows the one thing you asked for: what day it is.</p></div><div class="feature-list"><div class="feature-row"><span class="feature-number">01</span><h3>Always visible</h3><p>A calm, glanceable calendar that stays close without taking over your screen.</p></div><div class="feature-row"><span class="feature-number">02</span><h3>No syncing</h3><p>No accounts, invitations, integrations, or permissions. Nothing to configure and nothing to leak.</p></div><div class="feature-row"><span class="feature-number">03</span><h3>No interruptions</h3><p>No notifications pretending to be helpful. Just a small utility doing exactly one job.</p></div></div></section>
+<section class="section"><div class="callout"><div><h2>Calendar, reduced to the useful part.</h2><p>A free Mac utility for people who sometimes just need to know the date.</p></div><a class="button" href="https://go.sg1-labs.us/products">Download free</a></div></section>
+<section class="email-signup"><h2>Stay in the loop</h2><p>New apps, updates, and the occasional RV build log. No spam.</p><form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank"><label class="sr-only" for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@email.com" required><button class="button" type="submit">Subscribe</button></form></section>
+<section class="other-products"><h2>More from SG1 Labs</h2><div class="product-links"><a href="https://go.sg1-labs.us/shipdrop">ShipDrop ↗</a><a href="https://go.sg1-labs.us/tab-reminder">Tab Reminder ↗</a><a href="https://go.sg1-labs.us/trialguard">Trial Guard ↗</a><a href="https://go.sg1-labs.us/slopclean">SlopClean ↗</a><a href="https://go.sg1-labs.us/agentx">AgentX ↗</a></div></section>
+<footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span>Built from an RV</span></footer>
+</main></div>
 </body>
 </html>

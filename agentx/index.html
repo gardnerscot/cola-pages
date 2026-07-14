@@ -1,82 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgentX — AI Agent Debugging</title>
-<meta name="description" content="Chrome DevTools for AI agents. Trace LLM calls and tool calls. pip install agentx-trace. $9.99." />
-<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/agentx/" />
-<style>
-  * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
-  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
-  h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
-  .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 16px; font-weight: 600 }
-  .anti { font-size: 0.95rem; color: #da3633; margin-bottom: 28px }
-  .buy { display: inline-flex; align-items: center; gap: 10px; background: #f0a060; color: #0d1117; border: none; padding: 14px 32px; font-size: 1.1rem; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s }
-  .buy:hover { background: #e8923a }
-  .secondary { display: inline-block; background: #161b22; color: #7c3aed; border: 1px solid #30363d; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: border-color .2s; margin-top: 12px }
-  .secondary:hover { border-color: #7c3aed }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 32px 24px; max-width: 500px; margin: 0 20px 40px; text-align: center }
-  .card h3 { color: #f0f6fc; margin-bottom: 12px; font-size: 1.15rem }
-  .card p { color: #8b949e; font-size: 0.95rem; line-height: 1.6 }
-  .email-signup { max-width: 440px; margin: 0 auto 60px; padding: 0 20px; text-align: center }
-  .email-signup h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
-  .email-signup p { color: #8b949e; font-size: 0.9rem; margin-bottom: 16px }
-  .email-signup form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap }
-  .email-signup input[type=email] { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; color: #c9d1d9; width: 260px }
-  .email-signup button { background: #7c3aed; color: #fff; border: none; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .2s }
-  .email-signup button:hover { background: #6d28d9 }
-  .other-products { max-width: 640px; margin: 0 auto 40px; padding: 0 20px; text-align: center }
-  .other-products h3 { color: #f0f6fc; margin-bottom: 12px }
-  .other-products .product-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
-  .other-products a { color: #58a6ff; text-decoration: none; font-size: 0.92rem; padding: 6px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 20px; transition: border-color .2s }
-  .other-products a:hover { border-color: #58a6ff }
-  .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100%; margin-top: auto }
-  .footer a { color: #58a6ff; text-decoration: none }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentX — See what your agent actually did.</title>
+<meta name="description" content="Trace LLM calls and tool calls in real time. Chrome DevTools for AI agents.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/agentx/">
+<link rel="stylesheet" href="../product-pages.css">
+<style>:root { --accent: #4f9ba6; --accent-dark: #27616a; --accent-soft: #d9eef0; --signal: #a8dadd; }</style>
 </head>
 <body>
-
-<div class="hero">
-  <h1>🔍 AgentX</h1>
-  <p class="sub">Chrome DevTools for AI agents. Trace LLM calls and tool calls in real time.</p>
-  <p class="price">$9.99</p>
-  <p class="anti">Debug your agents. Ship with confidence.</p>
-  <a class="buy" href="https://scotlab.gumroad.com/l/agentx">Buy on Gumroad — $9.99</a>
-  <br><a class="secondary" href="https://pypi.org/project/agentx-trace/">pip install agentx-trace</a>
-</div>
-
-<div class="card">
-  <h3>Debug Your Agents</h3>
-  <p>When your AI agent does something baffling, AgentX shows you exactly what happened — every prompt, every tool call, every decision tree. Stop guessing, start tracing.</p>
-</div>
-
-<div class="email-signup">
-  <h3>📬 Stay in the loop</h3>
-  <p>New apps, updates, and the occasional RV build log. No spam.</p>
-  <form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank">
-    <input type="email" name="email" placeholder="you@email.com" required />
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
-
-<div class="other-products">
-  <h3>More from SG1 Labs</h3>
-  <div class="product-links">
-    <a href="https://go.sg1-labs.us/shipdrop">🚀 ShipDrop</a>
-    <a href="https://go.sg1-labs.us/tab-reminder">⏰ Tab Reminder</a>
-    <a href="https://go.sg1-labs.us/trialguard">🛡️ Trial Guard</a>
-    <a href="https://go.sg1-labs.us/simple-calendar">📅 Simple Calendar</a>
-    <a href="https://go.sg1-labs.us/slopclean">🧹 SlopClean</a>
-  </div>
-</div>
-
-<div class="footer">
-  Made by <a href="https://sg1-labs.us">SG1 Labs</a> · 
-  Built from an RV 🚐
-</div>
-
+<div class="page-shell">
+<header class="site-header"><a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a><a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="hero">
+<div><span class="kicker">Observability for AI agents</span><h1>AgentX</h1><p class="lede">See what your agent actually did.</p><div class="hero-actions"><a class="button" href="https://scotlab.gumroad.com/l/agentx">Buy for $9.99</a><a class="button secondary" href="https://pypi.org/project/agentx-trace/">View on PyPI</a></div><p class="price-note">$9.99 one-time · Trace LLM calls · Trace tool calls</p></div>
+<div class="product-mark" aria-label="AgentX product mark"><div class="mark-inner"><span class="mark-symbol" aria-hidden="true">⌁</span><span class="mark-name">trace<br>the why.</span><span class="mark-caption">inspect · understand · fix</span></div></div>
+</section>
+<section class="section" id="details"><div class="section-heading"><h2>When the agent goes sideways.</h2><p class="section-note">AgentX gives you the trail between prompt, model, tool, and result.</p></div><div class="feature-list"><div class="feature-row"><span class="feature-number">01</span><h3>Follow every call</h3><p>See the LLM requests and tool calls that make up an agent run, in the order they happened.</p></div><div class="feature-row"><span class="feature-number">02</span><h3>Find the expensive step</h3><p>Understand where an agent is slow, noisy, or burning tokens before the bill becomes the bug report.</p></div><div class="feature-row"><span class="feature-number">03</span><h3>Fix the real failure</h3><p>Replace “the agent did something weird” with a trace you can inspect, explain, and improve.</p></div></div></section>
+<section class="section"><div class="callout"><div><h2>Stop guessing what happened.</h2><p>Give every agent run a paper trail.</p></div><a class="button" href="https://scotlab.gumroad.com/l/agentx">Buy AgentX</a></div></section>
+<section class="email-signup"><h2>Stay in the loop</h2><p>New apps, updates, and the occasional RV build log. No spam.</p><form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank"><label class="sr-only" for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@email.com" required><button class="button" type="submit">Subscribe</button></form></section>
+<section class="other-products"><h2>More from SG1 Labs</h2><div class="product-links"><a href="https://go.sg1-labs.us/shipdrop">ShipDrop ↗</a><a href="https://go.sg1-labs.us/tab-reminder">Tab Reminder ↗</a><a href="https://go.sg1-labs.us/trialguard">Trial Guard ↗</a><a href="https://go.sg1-labs.us/simple-calendar">Simple Calendar ↗</a><a href="https://go.sg1-labs.us/slopclean">SlopClean ↗</a></div></section>
+<footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span>Built from an RV</span></footer>
+</main></div>
 </body>
 </html>
