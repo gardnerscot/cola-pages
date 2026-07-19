@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nook — Private Local-First Personal Vault for Mac | SG1 Labs</title>
+<meta name="description" content="Nook is a private, local-first Mac vault for organizing personal records, notes, contacts, cards, warranties, receipts, and local attachments.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/nook/">
+<link rel="stylesheet" href="../product-pages.css">
+<style>
+  :root {
+    --accent: #8b6b4a;
+    --accent-dark: #5c4630;
+    --accent-soft: #f0e6d8;
+    --signal: #d4c48a;
+  }
+  .hero {
+    min-height: 0;
+    padding: 48px 0 56px;
+    gap: 48px;
+  }
+  h1 { margin: 12px 0 16px; }
+  .lede { max-width: 540px; }
+  .hero-actions { margin-top: 24px; }
+  .price-note { margin-top: 12px; }
+
+  /* Restrained record signal — not a decorative card stack or fake dashboard */
+  .record-signal {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border: 1px solid var(--ink);
+    background: var(--surface);
+  }
+  .record-signal-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--accent-soft);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+  }
+  .record-signal-body { padding: 18px; }
+  .record-signal-kind {
+    margin: 0 0 6px;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .record-signal-title {
+    margin: 0 0 14px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    line-height: 1.15;
+  }
+  .record-signal-rows {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+  .record-signal-rows li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .9rem;
+  }
+  .record-signal-rows li span:first-child {
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+  .record-signal-rows li span:last-child {
+    text-align: right;
+    font-weight: 650;
+    color: var(--ink);
+  }
+  .record-signal-foot {
+    margin: 14px 0 0;
+    font-size: .78rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .prose {
+    max-width: 640px;
+    margin: 0 0 28px;
+    color: #465050;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+  .prose-tight { margin-bottom: 18px; }
+
+  .bound-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+  .bound-list li {
+    position: relative;
+    padding: 16px 0 16px 30px;
+    border-bottom: 1px solid var(--line);
+    color: #465050;
+    font-size: .96rem;
+    line-height: 1.5;
+  }
+  .bound-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--accent-dark);
+    font-weight: 800;
+  }
+
+  @media (max-width: 760px) {
+    .hero { padding: 40px 0 48px; gap: 36px; }
+    .record-signal { max-width: none; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .hero-actions .button { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="kicker">Local-first Mac vault</span>
+      <h1 id="hero-title">Nook</h1>
+      <p class="lede">A private, local-first vault for the records, notes, contacts, cards, and warranties you need to keep close.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+        <a class="button secondary" href="#records">See what belongs in Nook</a>
+      </div>
+      <p class="price-note">On your Mac · No cloud sync in the current app · Not generic AI chat</p>
+    </div>
+
+    <div class="record-signal" aria-label="Illustrative Nook warranty record example">
+      <div class="record-signal-header">Nook</div>
+      <div class="record-signal-body">
+        <p class="record-signal-kind">Warranty record</p>
+        <p class="record-signal-title">MacBook Pro</p>
+        <ul class="record-signal-rows">
+          <li><span>Purchased</span><span>March 2026</span></li>
+          <li><span>Coverage</span><span>Limited warranty</span></li>
+          <li><span>Attachment</span><span>Receipt attached</span></li>
+        </ul>
+        <p class="record-signal-foot">Illustrative example. The record stays connected to its supporting details and local files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Records -->
+  <section class="section" id="records" aria-labelledby="records-heading">
+    <div class="section-heading">
+      <h2 id="records-heading">The details that are easy to lose.</h2>
+      <p class="section-note">Durable personal records, organized in named compartments—not a browser bookmark graveyard.</p>
+    </div>
+    <p class="prose">Nook is for information you expect to need again: useful snippets, people, cards, product coverage, and the files that prove what you own.</p>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Snippets and notes</h3>
+        <p>Keep reusable text, tags, and short notes in named nooks you control.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Contacts</h3>
+        <p>Store people and organizations with phone, email, address, and related notes.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Cards and memberships</h3>
+        <p>Keep card and membership metadata with the vault; sensitive values can stay in the macOS Keychain.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Warranty records</h3>
+        <p>Product identity, purchase and coverage dates, notes, and local attachments in one place.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">05</span>
+        <h3>Receipts and local attachments</h3>
+        <p>Attach receipts, photos, or related files to a warranty record on your Mac.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warranty -->
+  <section class="section" id="warranties" aria-labelledby="warranties-heading">
+    <div class="section-heading">
+      <h2 id="warranties-heading">Remember what you bought—and when it is covered.</h2>
+      <p class="section-note">A product record with dates and files—not automatic claim approval.</p>
+    </div>
+    <p class="prose">Warranty records in Nook can hold product identity (manufacturer, model, serial), purchase date and retailer notes, warranty start and expiration dates, coverage notes, and local attachments such as receipts or photos.</p>
+    <ul class="bound-list">
+      <li>Filter warranties by active, expiring soon, expired, or no end date.</li>
+      <li>Sort by soonest expiration so coverage windows stay visible.</li>
+      <li>Export a claim-packet PDF that gathers the product details and attachment names for your own use.</li>
+    </ul>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">Nook helps you keep the record and supporting files together. It does not automatically determine whether a claim will be approved, and it does not connect to retailers, banks, or automatic document-scanning services.</p>
+  </section>
+
+  <!-- Local-first -->
+  <section class="section" id="private" aria-labelledby="private-heading">
+    <div class="section-heading">
+      <h2 id="private-heading">Private by default.</h2>
+      <p class="section-note">Local storage and direct user control—not a hosted vault service.</p>
+    </div>
+    <ul class="bound-list">
+      <li><strong>Records live on your Mac.</strong> Item metadata is stored in the app’s local data store (SwiftData on device).</li>
+      <li><strong>Attachments stay local.</strong> Warranty files are kept under the app’s local Application Support storage.</li>
+      <li><strong>Secrets use the Keychain.</strong> Values marked secret are stored in the macOS Keychain with accessibility limited to this device when unlocked—not as iCloud-synced vault content managed by Nook.</li>
+      <li><strong>No cloud sync in the current app.</strong> The Mac App Store build is sandboxed without network client entitlements for accounts, analytics, or SG1 Labs phone-home.</li>
+      <li><strong>Not remote AI by default.</strong> Nook is not generic AI chat and does not send your vault to a remote AI service for classification or retrieval.</li>
+    </ul>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">Nook is designed around local storage and direct user control. The claims here match the local-first architecture the app actually implements—not exaggerated security slogans.</p>
+  </section>
+
+  <!-- Workflow -->
+  <section class="section" id="workflow" aria-labelledby="workflow-heading">
+    <div class="section-heading">
+      <h2 id="workflow-heading">Keep the record, not just the reminder.</h2>
+      <p class="section-note">From capture to action without scattering details across apps.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Add the record</h3>
+        <p>Capture the product, contact, card, snippet, note, or warranty details you want to keep.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Attach the supporting file</h3>
+        <p>Keep a receipt, warranty terms, or related local attachment with the warranty record.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Find it when it matters</h3>
+        <p>Use named nooks (compartments), filters, and search across titles, tags, and notes to get back to the information.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Act with the details in hand</h3>
+        <p>Use the record for renewal checks, warranty questions, contact follow-up, or a claim-packet PDF export.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Boundaries -->
+  <section class="section" id="boundaries" aria-labelledby="boundaries-heading">
+    <div class="section-heading">
+      <h2 id="boundaries-heading">Focused by design.</h2>
+      <p class="section-note">Separate products. Separate jobs. Explicit handoffs later—not silent cross-product search now.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Nook</h3>
+        <p>Owns durable personal records, sensitive vault data, contacts, cards, notes, warranties, receipts, and local attachments.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Document Desk</h3>
+        <p>Owns evidence-heavy documents, page citations, obligations, comparisons, and grounded briefs.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>LifeCapture</h3>
+        <p>Owns memories, photos, journals, events, and timeline context.</p>
+      </div>
+    </div>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">These products remain separate. Nook does not silently search or expose records from Document Desk or LifeCapture, and future handoffs would be explicit and user-controlled. Universal Hearth search is not described as currently available.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="callout">
+      <div>
+        <h2 id="cta-heading">Keep the important details close.</h2>
+        <p>Keep the things you need close without handing your private records to another cloud service.</p>
+      </div>
+      <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+    </div>
+  </section>
+
+  <section class="other-products">
+    <h2>More from SG1 Labs</h2>
+    <div class="product-links">
+      <a href="https://go.sg1-labs.us/products">All products ↗</a>
+      <a href="../document-desk/">Document Desk</a>
+      <a href="../lifecapture/">LifeCapture</a>
+      <a href="../tab-reminder/">Tab Reminder</a>
+      <a href="../support/">Support</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="https://sg1-labs.us">Made by SG1 Labs</a>
+    <span>
+      <a href="https://go.sg1-labs.us/products">Products</a>
+      ·
+      <a href="../support/">Support</a>
+    </span>
+  </footer>
+</main>
+</div>
+</body>
+</html>
