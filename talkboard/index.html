@@ -1,130 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TalkBoard — Dictation + Quick Fix + Clipboard for Mac</title>
-<meta name="description" content="TalkBoard replaces Raycast Pro's dictation, AI text polish, and clipboard manager in one $9.99 Mac app. On-device, private, no subscription. Download on Gumroad." />
-<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/talkboard/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TalkBoard — Dictation, Quick Fix, and Clipboard for Mac | SG1 Labs</title>
+<meta name="description" content="TalkBoard puts on-device dictation, text polish, and clipboard history in one focused Mac app. $9.99 one-time, no subscription.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/talkboard/">
+<link rel="stylesheet" href="../product-pages.css">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
-  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
-  h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
-  .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 16px; font-weight: 600 }
-  .anti { font-size: 0.95rem; color: #da3633; margin-bottom: 28px }
-  .buy { display: inline-flex; align-items: center; gap: 10px; background: #f0a060; color: #0d1117; border: none; padding: 14px 32px; font-size: 1.1rem; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s }
-  .buy:hover { background: #e8923a }
-  .version { font-size: 0.85rem; color: #8b949e; margin-top: 8px }
-  .badge-row { margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap }
-  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; max-width: 880px; padding: 0 20px 60px }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 28px 20px; text-align: center }
-  .card .icon { font-size: 2.2rem; margin-bottom: 12px }
-  .card h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.15rem }
-  .card p { color: #8b949e; font-size: 0.92rem; line-height: 1.5 }
-  .highlight { background: #161b22; border: 1px solid #30363d; border-radius: 12px; max-width: 600px; margin: 0 auto 60px; padding: 0 20px; }
-  .highlight .inner { padding: 24px; text-align: center }
-  .highlight h3 { color: #f0f6fc; margin-bottom: 8px }
-  .highlight p { color: #8b949e; font-size: 0.92rem }
-  .footer { text-align: center; padding: 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100% }
-  .email-signup { max-width: 440px; margin: 0 auto 60px; padding: 0 20px; text-align: center }
-  .email-signup h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
-  .email-signup p { color: #8b949e; font-size: 0.9rem; margin-bottom: 16px }
-  .email-signup form { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap }
-  .email-signup input[type=email] { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; color: #c9d1d9; width: 260px }
-  .email-signup button { background: #7c3aed; color: #fff; border: none; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background .2s }
-  .email-signup button:hover { background: #6d28d9 }
-  .other-products { max-width: 640px; margin: 0 auto 40px; padding: 0 20px; text-align: center }
-  .other-products h3 { color: #f0f6fc; margin-bottom: 12px }
-  .other-products .product-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
-  .other-products a { color: #58a6ff; text-decoration: none; font-size: 0.92rem; padding: 6px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 20px; transition: border-color .2s }
-  .other-products a:hover { border-color: #58a6ff }
-  @media (max-width: 700px) { .three-col { grid-template-columns: 1fr } }
+  :root {
+    --accent: #bd7449;
+    --accent-dark: #854726;
+    --accent-soft: #f0dfd1;
+    --signal: #d1c56a;
+  }
+  .hero { min-height: 0; padding: 48px 0 56px; gap: 48px; }
+  h1 { margin: 12px 0 16px; }
+  .lede { max-width: 560px; }
+  .hero-actions { margin-top: 24px; }
+  .price-note { margin-top: 12px; }
+  .launchstag { display: inline-block; margin-top: 22px; line-height: 0; }
+  .launchstag img { display: block; width: 198px; height: 62px; }
+  .talk-signal {
+    width: 100%; max-width: 380px; margin: 0 auto;
+    border: 1px solid var(--ink); background: var(--surface);
+  }
+  .talk-signal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 18px; border-bottom: 1px solid var(--line);
+    background: var(--accent-soft); color: var(--accent-dark);
+    font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .talk-signal-status { color: var(--muted); font-size: .66rem; letter-spacing: .08em; }
+  .talk-signal-body { padding: 18px; }
+  .talk-signal-kicker { margin: 0 0 6px; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .talk-signal-title { margin: 0 0 14px; font-size: 1.3rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.15; }
+  .talk-signal-rows { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+  .talk-signal-rows span { display: block; padding: 12px 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font-size: .78rem; font-weight: 700; text-align: center; }
+  .talk-signal-rows small { display: block; margin-bottom: 4px; color: var(--muted); font-size: .65rem; font-weight: 650; }
+  .talk-signal-foot { margin: 14px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+  .prose { max-width: 660px; margin: 0 0 28px; color: #465050; font-size: 1.02rem; line-height: 1.55; }
+  .compare-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+  .compare-list li { position: relative; padding: 16px 0 16px 30px; border-bottom: 1px solid var(--line); color: #465050; font-size: .96rem; line-height: 1.5; }
+  .compare-list li::before { content: "-"; position: absolute; left: 0; top: 16px; color: var(--accent-dark); font-weight: 800; }
+  .note { margin-top: 28px; color: var(--muted); font-size: .86rem; }
+  @media (max-width: 760px) {
+    .hero { padding: 40px 0 48px; gap: 36px; }
+    .talk-signal { max-width: none; }
+    .talk-signal-rows { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="kicker">A focused Mac utility</span>
+      <h1 id="hero-title">TalkBoard</h1>
+      <p class="lede">Dictation, text polish, and clipboard history for the moments when typing gets in the way.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://scotlab.gumroad.com/l/talkboard">Buy TalkBoard</a>
+        <a class="button secondary" href="#workflow">See how it works</a>
+      </div>
+      <p class="price-note">$9.99 one-time · macOS 14+ · Apple Silicon · No subscription</p>
+      <a class="launchstag" href="https://launchstag.com" target="_blank" rel="noopener"><img src="https://launchstag.com/badge-light.svg" alt="Featured on LaunchStag" width="198" height="62"></a>
+    </div>
+    <div class="talk-signal" aria-label="Illustrative TalkBoard utility signal">
+      <div class="talk-signal-header"><span>TalkBoard</span><span class="talk-signal-status">Menu bar utility</span></div>
+      <div class="talk-signal-body">
+        <p class="talk-signal-kicker">Three tools, one shortcut layer</p>
+        <p class="talk-signal-title">Say it. Fix it. Find it again.</p>
+        <div class="talk-signal-rows">
+          <span><small>Speak</small>Dictation</span>
+          <span><small>Polish</small>Quick Fix</span>
+          <span><small>Recall</small>Clipboard</span>
+        </div>
+        <p class="talk-signal-foot">Illustrative product signal. TalkBoard keeps the work close to the Mac where you are already writing.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="hero">
-  <h1>🎤✨📋 TalkBoard</h1>
-  <p class="sub">Dictation. AI Quick Fix. Clipboard Manager.<br>The three Raycast Pro features you actually use.</p>
-  <p class="price">$9.99 — once. Forever.</p>
-  <p class="anti">No subscription. No $10/month. No cloud dependency.</p>
-  <a class="buy" href="https://scotlab.gumroad.com/l/talkboard">Buy on Gumroad — $9.99</a>
-  <p class="version">v1.0.3 · macOS 14+ (Apple Silicon)</p>
-  <div class="badge-row">
-    <a href="https://launchstag.com" target="_blank" rel="noopener">
-      <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" />
-    </a>
-  </div>
+  <section class="section" id="workflow" aria-labelledby="workflow-heading">
+    <div class="section-heading">
+      <h2 id="workflow-heading">Three small tools that remove friction.</h2>
+      <p class="section-note">TalkBoard stays focused on the repeated actions between thinking and finished text.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row"><span class="feature-number">01</span><h3>Dictation</h3><p>Press a hotkey, speak naturally, and put the words wherever you are typing. Powered by whisper.cpp and designed to work on-device.</p></div>
+      <div class="feature-row"><span class="feature-number">02</span><h3>Quick Fix</h3><p>Polish rough text with focused tones such as Formal, Friendly, Email, Bullets, or Raw, without sending it to a hosted API.</p></div>
+      <div class="feature-row"><span class="feature-number">03</span><h3>Clipboard history</h3><p>Search past copies, keep favorites close, and paste the useful thing again from the menu bar.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="private" aria-labelledby="private-heading">
+    <div class="section-heading">
+      <h2 id="private-heading">Your words stay on your Mac.</h2>
+      <p class="section-note">TalkBoard is built around local processing and direct access, not another account dashboard.</p>
+    </div>
+    <ul class="compare-list">
+      <li><strong>On-device dictation.</strong> whisper.cpp handles speech recognition locally.</li>
+      <li><strong>On-device Quick Fix.</strong> Text polish does not require an API key or hosted AI service.</li>
+      <li><strong>Local clipboard history.</strong> Your copied material stays in the app on your Mac.</li>
+      <li><strong>One-time purchase.</strong> Buy the app once instead of adding another monthly tool.</li>
+    </ul>
+    <p class="note">TalkBoard is a focused utility, not a replacement for every feature in a larger productivity suite.</p>
+  </section>
+
+  <section class="section" id="comparison" aria-labelledby="comparison-heading">
+    <div class="section-heading">
+      <h2 id="comparison-heading">The lazy version of a Mac utility.</h2>
+      <p class="section-note">One menu bar app for the three actions you repeat all day.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row"><span class="feature-number">01</span><h3>Less context switching</h3><p>Dictate, polish, or retrieve a copy without leaving the app where the work is happening.</p></div>
+      <div class="feature-row"><span class="feature-number">02</span><h3>Less subscription creep</h3><p>A $9.99 one-time Mac utility for a narrow job, instead of another recurring bundle.</p></div>
+      <div class="feature-row"><span class="feature-number">03</span><h3>Less cloud dependency</h3><p>Local-first tools for voice, text, and clipboard history, with no account required for the core workflow.</p></div>
+    </div>
+    <p class="note">See the full comparison for Indie Hackers: <a href="indie-hackers.html">TalkBoard vs. the subscription stack</a>.</p>
+  </section>
+
+  <section class="section"><div class="callout"><div><h2>Use the lazy version.</h2><p>TalkBoard puts dictation, Quick Fix, and clipboard history in one small Mac utility.</p></div><a class="button" href="https://scotlab.gumroad.com/l/talkboard">Buy TalkBoard</a></div></section>
+  <section class="other-products"><h2>More from SG1 Labs</h2><div class="product-links"><a href="../document-desk/">Document Desk ↗</a><a href="../nook/">Nook ↗</a><a href="../lifecapture/">LifeCapture ↗</a><a href="../tab-reminder/">Tab Reminder ↗</a><a href="https://go.sg1-labs.us/products">All products ↗</a></div></section>
+  <footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span>TalkBoard v1.0.5 · <a href="https://go.sg1-labs.us/tab-reminder-privacy">Privacy</a></span></footer>
+</main>
 </div>
-
-<div class="three-col">
-  <div class="card">
-    <div class="icon">🎤</div>
-    <h3>Dictation</h3>
-    <p>Press a hotkey, speak naturally, words appear wherever you're typing. Powered by whisper.cpp — fully on-device, private, works offline.</p>
-  </div>
-  <div class="card">
-    <div class="icon">✨</div>
-    <h3>Quick Fix</h3>
-    <p>Paste rough text, choose a tone — Formal, Friendly, Email, Bullets, or Raw — and let on-device AI polish it. No API keys required.</p>
-  </div>
-  <div class="card">
-    <div class="icon">📋</div>
-    <h3>Clipboard</h3>
-    <p>Never lose a copy. Searchable history, favorites, one-click paste. AES-256 encrypted, lives in your menu bar.</p>
-  </div>
-</div>
-
-<div class="highlight">
-  <div class="inner">
-    <h3>💡 Why TalkBoard vs. Raycast Pro?</h3>
-    <table style="width:100%;border-collapse:collapse;margin:20px 0;text-align:left;font-size:0.9rem">
-      <tr style="border-bottom:1px solid #30363d"><th style="padding:8px;color:#f0f6fc">Feature</th><th style="padding:8px;color:#f0f6fc">Raycast Pro</th><th style="padding:8px;color:#56d364">TalkBoard</th></tr>
-      <tr style="border-bottom:1px solid #21262d"><td style="padding:8px">Dictation</td><td style="padding:8px">✅</td><td style="padding:8px">✅ whisper.cpp</td></tr>
-      <tr style="border-bottom:1px solid #21262d"><td style="padding:8px">AI Text Polish</td><td style="padding:8px">✅</td><td style="padding:8px">✅ 5 tones</td></tr>
-      <tr style="border-bottom:1px solid #21262d"><td style="padding:8px">Clipboard Manager</td><td style="padding:8px">✅</td><td style="padding:8px">✅ AES-256</td></tr>
-      <tr style="border-bottom:1px solid #21262d"><td style="padding:8px">Price</td><td style="padding:8px;color:#da3633">$8–10/mo</td><td style="padding:8px;color:#56d364">$9.99 forever</td></tr>
-      <tr><td style="padding:8px">Cloud Required?</td><td style="padding:8px;color:#da3633">Yes</td><td style="padding:8px;color:#56d364">No — fully offline</td></tr>
-    </table>
-    <p style="margin-top:16px">macOS 27 Spotlight handles launching. TalkBoard handles dictation, text polish, and clipboard — all on-device. Your voice, your text, your clipboard never leave your Mac. No account, no API key, no internet required.</p>
-  </div>
-</div>
-
-<div class="highlight" style="max-width:600px;margin:0 auto 40px">
-  <div class="inner" style="text-align:left">
-    <h3 style="text-align:center;margin-bottom:4px">📖 Also read</h3>
-    <p style="text-align:center"><a href="indie-hackers.html" style="color:#58a6ff;font-size:1rem">TalkBoard for Indie Hackers</a> — how solo builders use dictation, AI polish, and clipboard history to ship faster.</p>
-  </div>
-</div>
-
-<div class="email-signup">
-  <h3>📬 Stay in the loop</h3>
-  <p>New apps, updates, and the occasional RV build log. No spam.</p>
-  <form action="https://go.sg1-labs.us/subscribe" method="post" target="_blank">
-    <input type="email" name="email" placeholder="you@email.com" required />
-    <button type="submit">Subscribe</button>
-  </form>
-</div>
-
-<div class="other-products">
-  <h3>More from SG1 Labs</h3>
-  <div class="product-links">
-    <a href="https://go.sg1-labs.us/products" target="_blank">🚀 ShipDrop</a>
-    <a href="https://go.sg1-labs.us/products" target="_blank">⏰ Tab Reminder</a>
-    <a href="https://go.sg1-labs.us/products" target="_blank">🛡️ Trial Guard</a>
-    <a href="https://go.sg1-labs.us/products" target="_blank">📅 Simple Calendar</a>
-    <a href="https://go.sg1-labs.us/products" target="_blank">🧹 SlopClean</a>
-  </div>
-</div>
-
-<div class="footer">
-  <a href="https://scotlab.gumroad.com/l/talkboard" style="color:#f0a060; font-weight:600">Buy on Gumroad — $9.99</a><br><br>
-  Made by <a href="https://sg1-labs.us" style="color:#58a6ff">SG1 Labs</a> · 
-  <a href="https://go.sg1-labs.us/tab-reminder-privacy" style="color:#58a6ff">Privacy</a> · 
-  Built from an RV 🚐
-</div>
-
 </body>
 </html>

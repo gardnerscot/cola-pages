@@ -1,182 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SG1 App Store — Mac Apps by Scot Gardner</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
-    h1 { font-size: 36px; color: #fff; margin-bottom: 8px; text-align: center; }
-    h1 span { background: linear-gradient(135deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .subtitle { text-align: center; color: #a0a0b8; margin-bottom: 40px; }
-    .product-card {
-      background: #1a1030; border: 1px solid #2a2040; border-radius: 12px; padding: 24px;
-      margin-bottom: 16px; display: flex; align-items: center; gap: 20px;
-      transition: border-color 0.2s; overflow: hidden;
-    }
-    .product-card:hover { border-color: #8b5cf6; }
-    .product-icon { font-size: 40px; min-width: 64px; text-align: center; }
-    .product-info { flex: 1; }
-    .product-info h3 { color: #fff; font-size: 18px; margin-bottom: 4px; }
-    .product-info p { color: #a0a0b8; font-size: 14px; margin-bottom: 8px; overflow-wrap: break-word; }
-    .product-info .price { color: #06b6d4; font-weight: 600; font-size: 14px; }
-    .product-link { color: #8b5cf6; font-size: 14px; text-decoration: none; font-weight: 500; }
-    .product-link:hover { text-decoration: underline; }
-    .footer { text-align: center; padding: 40px; color: #666; font-size: 14px; }
-    .footer a { color: #666; }
-    .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
-    .badge-new { background: #06b6d4; color: #000; }
-    .badge-live { background: #22c55e; color: #000; }
-    .badge-soon { background: #f59e0b; color: #000; }
-    @media (max-width: 500px) {
-      .product-card {
-        flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px;
-      }
-      .product-icon { min-width: unset; text-align: left; }
-      .product-link { align-self: flex-end; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SG1 Labs — Focused Software for Mac, iPhone, Chrome, and the Web</title>
+<meta name="description" content="Explore focused software from SG1 Labs for macOS, iPhone, Chrome, and the web. Local-first utilities, practical tools, and privacy-minded products.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/products/">
+<link rel="stylesheet" href="../product-pages.css">
+<style>
+  .collection-hero { padding: 64px 0 72px; border-bottom: 1px solid var(--line); }
+  .collection-hero h1 { max-width: 760px; margin: 12px 0 20px; }
+  .collection-hero p { max-width: 640px; margin: 0; color: #465050; font-size: 1.18rem; line-height: 1.55; }
+  .collection-note { margin-top: 20px !important; color: var(--muted) !important; font-size: .86rem !important; }
+  .collection-section { padding: 54px 0 0; }
+  .collection-section + .collection-section { padding-top: 72px; }
+  .collection-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 22px; }
+  .collection-heading h2 { font-size: 1.7rem; }
+  .collection-heading p { max-width: 420px; margin: 0; color: var(--muted); font-size: .92rem; text-align: right; }
+  .product-list { border-top: 1px solid var(--ink); }
+  .product-row { display: grid; grid-template-columns: 190px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .product-row h3 { margin: 0 0 5px; font-size: 1.18rem; }
+  .product-row p { max-width: 620px; margin: 0; color: var(--muted); font-size: .94rem; }
+  .product-kind { color: var(--accent-dark); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .product-meta { display: block; margin-top: 8px; color: var(--muted); font-size: .78rem; }
+  .product-link { color: var(--ink); font-size: .86rem; font-weight: 750; text-decoration: none; white-space: nowrap; }
+  .product-link:hover { color: var(--accent-dark); }
+  .status { display: inline-block; margin-left: 8px; padding: 3px 7px; border: 1px solid var(--line); color: var(--muted); font-size: .64rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; vertical-align: middle; }
+  .status.live { border-color: var(--accent-dark); color: var(--accent-dark); }
+  .status.beta { border-color: #827b2c; color: #71691d; }
+  .status.soon { color: var(--muted); }
+  .collection-footer { padding: 72px 0 28px; }
+  .collection-footer p { max-width: 560px; margin: 0; color: var(--muted); font-size: .9rem; }
+  @media (max-width: 760px) {
+    .collection-hero { padding: 48px 0 56px; }
+    .collection-heading { display: block; }
+    .collection-heading p { margin-top: 10px; text-align: left; }
+    .product-row { grid-template-columns: 1fr auto; gap: 10px 16px; }
+    .product-row .product-info { grid-column: 1 / -1; }
+    .product-link { grid-column: 2; grid-row: 2; }
+  }
+</style>
 </head>
 <body>
-<div class="container">
-  <h1>🛍️ <span>SG1 App Store</span></h1>
-  <p class="subtitle">Small, useful Mac apps. One-time purchase. No subscriptions. No IAP. No bullshit.</p>
-  
-  <div class="product-card">
-    <div class="product-icon">🎤</div>
-    <div class="product-info">
-      <h3>TalkBoard <span class="badge badge-new">NEW</span></h3>
-      <p>Dictation. AI Quick Fix. Clipboard Manager.<br>The three Raycast Pro features you actually use.</p>
-      <span class="price">$9.99 one-time</span>
-    </div>
-    <a href="https://go.sg1-labs.us/talkboard" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">🔒</div>
-    <div class="product-info">
-      <h3>VibeCheck <span class="badge badge-new">NEW</span></h3>
-      <p>Security scanner for AI-generated code. 30+ heuristics, A-F score. Scan in 2 seconds.</p>
-      <span class="price">$9.99/scan</span>
-    </div>
-    <a href="https://vibecheck.shipdrop.dev" class="product-link">View →</a>
-  </div>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://sg1-labs.us">SG1 Labs home <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+  <section class="collection-hero" aria-labelledby="hero-title">
+    <span class="kicker">The SG1 Labs collection</span>
+    <h1 id="hero-title">Small software for specific problems.</h1>
+    <p>Focused tools for macOS, iPhone, Chrome, and the web. Built to do one useful thing well, without turning every problem into a subscription dashboard.</p>
+    <p class="collection-note">Some products are available now. Others are in TestFlight or early development. Each page tells you which.</p>
+  </section>
 
-  <div class="product-card">
-    <div class="product-icon">🥇</div>
-    <div class="product-info">
-      <h3>FrugalSEO <span class="badge badge-new">NEW</span></h3>
-      <p>SEO toolkit for solopreneurs. Low-competition keywords, site audits, one daily action.</p>
-      <span class="price">$9.99/mo</span>
+  <section class="collection-section" aria-labelledby="hearth-heading">
+    <div class="collection-heading"><h2 id="hearth-heading">The private context family</h2><p>Separate products with separate jobs. No unrestricted shared database.</p></div>
+    <div class="product-list">
+      <article class="product-row"><span class="product-kind">Personal records</span><div class="product-info"><h3>Nook <span class="status live">Mac</span></h3><p>A private, local-first vault for personal records, notes, contacts, cards, warranties, and local attachments.</p><span class="product-meta">Mac app · Local-first</span></div><a class="product-link" href="../nook/">View Nook ↗</a></article>
+      <article class="product-row"><span class="product-kind">Lived experience</span><div class="product-info"><h3>LifeCapture <span class="status beta">TestFlight</span></h3><p>Keep screenshots, receipts, notes, and voice memos useful after the moment has passed.</p><span class="product-meta">iPhone app · Free to start · Pro $9.99 one-time</span></div><a class="product-link" href="../lifecapture/">View LifeCapture ↗</a></article>
+      <article class="product-row"><span class="product-kind">Evidence and documents</span><div class="product-info"><h3>Document Desk <span class="status soon">Early access</span></h3><p>Build grounded briefs, compare revisions, preserve page citations, and review obligations, deadlines, fees, and risks.</p><span class="product-meta">Document workspace · PCC review when available</span></div><a class="product-link" href="../document-desk/">View Document Desk ↗</a></article>
     </div>
-    <a href="https://frugalseo.shipdrop.dev" class="product-link">View →</a>
-  </div>
+  </section>
 
-  <div class="product-card">
-    <div class="product-icon">📥</div>
-    <div class="product-info">
-      <h3>LifeCapture <span class="badge badge-new">NEW</span></h3>
-      <p>Screenshots, receipts, voice memos — auto-sorted by on-device AI. Free on iOS.</p>
-      <span class="price">Free + Pro $9.99</span>
+  <section class="collection-section" aria-labelledby="desktop-heading">
+    <div class="collection-heading"><h2 id="desktop-heading">Mac utilities</h2><p>Small tools that earn their place in the menu bar or on the desktop.</p></div>
+    <div class="product-list">
+      <article class="product-row"><span class="product-kind">Dictation and clipboard</span><div class="product-info"><h3>TalkBoard <span class="status live">Available</span></h3><p>On-device dictation, text polish, and clipboard history in one focused Mac app.</p><span class="product-meta">macOS · $9.99 one-time</span></div><a class="product-link" href="../talkboard/">View TalkBoard ↗</a></article>
+      <article class="product-row"><span class="product-kind">Trial tracking</span><div class="product-info"><h3>Trial Guard <span class="status live">Available</span></h3><p>Track free trials from the menu bar and avoid unexpected charges.</p><span class="product-meta">macOS · $0.99 one-time</span></div><a class="product-link" href="https://go.sg1-labs.us/trialguard">View Trial Guard ↗</a></article>
+      <article class="product-row"><span class="product-kind">A simpler calendar</span><div class="product-info"><h3>Simple Calendar <span class="status live">Available</span></h3><p>A wall calendar for your Mac. No events, sync, or notifications. Just the date.</p><span class="product-meta">macOS · Free</span></div><a class="product-link" href="https://go.sg1-labs.us/simple-calendar">View Simple Calendar ↗</a></article>
     </div>
-    <a href="https://gardnerscot.github.io/cola-pages/lifecapture/" class="product-link">View →</a>
-  </div>
+  </section>
 
-  <div class="product-card">
-    <div class="product-icon">🎯</div>
-    <div class="product-info">
-      <h3>Bottleneck <span class="badge badge-new">NEW</span></h3>
-      <p>Find the one metric killing your SaaS trial-to-paid funnel. Single-number diagnosis.</p>
-      <span class="price">$79 one-time</span>
+  <section class="collection-section" aria-labelledby="web-heading">
+    <div class="collection-heading"><h2 id="web-heading">Web products</h2><p>Practical tools for shipping, marketing, and keeping the internet slightly less awful.</p></div>
+    <div class="product-list">
+      <article class="product-row"><span class="product-kind">Deployment</span><div class="product-info"><h3>ShipDrop <span class="status live">Available</span></h3><p>Deploy a project to the web in seconds without turning release day into a ceremony.</p><span class="product-meta">Web app · $9.99/month</span></div><a class="product-link" href="https://shipdrop.dev">Visit ShipDrop ↗</a></article>
+      <article class="product-row"><span class="product-kind">Browser focus</span><div class="product-info"><h3>Tab Reminder <span class="status live">Available</span></h3><p>Set a timer on a Chrome tab and get reminded to return when it matters.</p><span class="product-meta">Chrome extension · $4.99 one-time</span></div><a class="product-link" href="../tab-reminder/">View Tab Reminder ↗</a></article>
+      <article class="product-row"><span class="product-kind">Code quality</span><div class="product-info"><h3>SlopClean <span class="status live">Available</span></h3><p>Clean up AI-generated code into something a human can maintain.</p><span class="product-meta">Web app · $9.99</span></div><a class="product-link" href="https://go.sg1-labs.us/slopclean">View SlopClean ↗</a></article>
+      <article class="product-row"><span class="product-kind">AI observability</span><div class="product-info"><h3>AgentX <span class="status live">Available</span></h3><p>Trace LLM calls and tool calls while you build with AI agents.</p><span class="product-meta">Developer tool · $9.99</span></div><a class="product-link" href="../agentx/">View AgentX ↗</a></article>
+      <article class="product-row"><span class="product-kind">Security review</span><div class="product-info"><h3>VibeCheck <span class="status live">Available</span></h3><p>Scan AI-generated code with focused security heuristics and get a quick risk signal.</p><span class="product-meta">Web app · $9.99 per scan</span></div><a class="product-link" href="https://vibecheck.shipdrop.dev">Visit VibeCheck ↗</a></article>
+      <article class="product-row"><span class="product-kind">SEO workflow</span><div class="product-info"><h3>FrugalSEO <span class="status live">Available</span></h3><p>A lean SEO toolkit for solopreneurs: audits, keywords, and one useful action at a time.</p><span class="product-meta">Web app · $9.99/month</span></div><a class="product-link" href="https://frugalseo.shipdrop.dev">Visit FrugalSEO ↗</a></article>
     </div>
-    <a href="https://bottleneck.shipdrop.dev" class="product-link">View →</a>
-  </div>
+  </section>
 
-  <div class="product-card">
-    <div class="product-icon">🚀</div>
-    <div class="product-info">
-      <h3>ShipDrop <span class="badge badge-live">LIVE</span></h3>
-      <p>Deploy any project to the web in 60 seconds. Drag, drop, live.</p>
-      <span class="price">$9.99/month</span>
+  <section class="collection-section" aria-labelledby="future-heading">
+    <div class="collection-heading"><h2 id="future-heading">Still taking shape</h2><p>Interesting work that is not being presented as available software.</p></div>
+    <div class="product-list">
+      <article class="product-row"><span class="product-kind">Communication</span><div class="product-info"><h3>Stakeshot <span class="status soon">Coming soon</span></h3><p>An experiment in making access to attention explicit, limited, and valuable.</p><span class="product-meta">Independent project · No Hearth dependency</span></div><a class="product-link" href="../stakeshot/">View Stakeshot ↗</a></article>
     </div>
-    <a href="https://shipdrop.dev" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">⏰</div>
-    <div class="product-info">
-      <h3>Tab Reminder <span class="badge badge-live">LIVE</span></h3>
-      <p>Chrome extension. Set a timer on any tab — get reminded to come back to it.</p>
-      <span class="price">$4.99 one-time</span>
-    </div>
-    <a href="https://go.sg1-labs.us/tab-reminder" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">🛡️</div>
-    <div class="product-info">
-      <h3>Trial Guard <span class="badge badge-live">LIVE</span></h3>
-      <p>macOS menu bar app. Track free trials and never get charged unexpectedly.</p>
-      <span class="price">$0.99 one-time</span>
-    </div>
-    <a href="https://go.sg1-labs.us/trialguard" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">📊</div>
-    <div class="product-info">
-      <h3>Prediction Tracker <span class="badge badge-live">LIVE</span></h3>
-      <p>Track predictions against reality. See who's actually right. Jim Cramer at 0%.</p>
-      <span class="price">Free</span>
-    </div>
-    <a href="https://go.sg1-labs.us/predictions" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">📅</div>
-    <div class="product-info">
-      <h3>Simple Calendar</h3>
-      <p>A wall calendar for your Mac. No events, no sync, no notifications. Just the date.</p>
-      <span class="price">Free</span>
-    </div>
-    <a href="https://go.sg1-labs.us/simple-calendar" class="product-link">View →</a>
-  </div>
-  
-  <div class="product-card">
-    <div class="product-icon">🧹✨</div>
-    <div class="product-info">
-      <h3>SlopClean <span class="badge badge-new">NEW</span></h3>
-      <p>Clean up AI-generated spaghetti code into maintainable architecture. One click.</p>
-      <span class="price">$9.99</span>
-    </div>
-    <a href="https://go.sg1-labs.us/slopclean" class="product-link">View →</a>
-  </div>
-  <div class="product-card">
-    <div class="product-icon">🔍</div>
-    <div class="product-info">
-      <h3>AgentX <span class="badge badge-new">NEW</span></h3>
-      <p>Chrome DevTools for AI agents. Trace LLM calls and tool calls. pip install agentx-trace.</p>
-      <span class="price">$9.99</span>
-    </div>
-    <a href="https://go.sg1-labs.us/agentx" class="product-link">View →</a>
-  </div>
+  </section>
 
-  <div class="product-card">
-    <div class="product-icon">✉️</div>
-    <div class="product-info">
-      <h3>Stakeshot <span class="badge badge-soon">COMING SOON</span></h3>
-      <p>Email-replacing messaging protocol with Bitcoin stakes. Say goodbye to spam forever.</p>
-      <span class="price">TBA</span>
-    </div>
-    <a href="https://gardnerscot.github.io/cola-pages/stakeshot/" class="product-link">View →</a>
-  </div>
-</div>
-<div class="footer">
-  <p><a href="https://sg1-labs.us">SG1 Labs</a> · <a href="mailto:scot@sg1-labs.us">Contact</a></p>
-  <p style="margin-top: 8px;">🇺🇸 Made in the U.S.A. — Gettysburg, Pennsylvania</p>
-  <p style="margin-top: 12px; font-style: italic; color: #8b949e;">"Commit your work to the Lord, and your plans will be established." — Proverbs 16:3</p>
+  <section class="collection-footer"><p>SG1 Labs is a small software studio. The products are deliberately separate because different kinds of information deserve different boundaries.</p></section>
+  <footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span><a href="https://go.sg1-labs.us/support">Support</a> · <a href="mailto:scot@sg1-labs.us">Contact</a></span></footer>
+</main>
 </div>
 </body>
 </html>
