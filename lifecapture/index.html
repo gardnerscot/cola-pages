@@ -1,127 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LifeCapture — Auto-organize screenshots, receipts & voice memos</title>
-<meta name="description" content="LifeCapture pulls screenshots, receipts, voice memos, and notes into one place. On-device AI auto-sorts everything into buckets. Free on the App Store." />
-<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/lifecapture/" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LifeCapture — Private On-Device Life Organizer | SG1 Labs</title>
+<meta name="description" content="LifeCapture organizes screenshots, receipts, notes, and voice memos on-device into useful buckets, without subscriptions or cloud uploads.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/lifecapture/">
+<link rel="stylesheet" href="../product-pages.css">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
-  .hero { text-align: center; padding: 80px 20px 40px; max-width: 640px }
-  .icon { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(99,102,241,0.3) }
-  h1 { font-size: 2.5rem; color: #f0f6fc; margin-bottom: 12px }
-  .sub { font-size: 1.2rem; color: #8b949e; margin-bottom: 8px; line-height: 1.6 }
-  .price { font-size: 1.15rem; color: #56d364; margin-bottom: 8px; font-weight: 600 }
-  .anti { font-size: 0.95rem; color: #8b949e; margin-bottom: 28px }
-  .download-btn { display: inline-flex; align-items: center; gap: 8px; background: #6366f1; color: #fff; border: none; padding: 14px 28px; font-size: 1.05rem; border-radius: 12px; cursor: pointer; text-decoration: none; font-weight: 700; transition: background .2s, transform .2s }
-  .download-btn:hover { background: #4f46e5; transform: translateY(-1px) }
-  .section-title { text-align: center; font-size: 1.8rem; color: #f0f6fc; margin: 60px 0 32px }
-  .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 880px; padding: 0 20px }
-  .feature { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px 20px; text-align: center }
-  .feature .icon-emoji { font-size: 2rem; margin-bottom: 12px }
-  .feature h3 { color: #f0f6fc; margin-bottom: 8px; font-size: 1.1rem }
-  .feature p { color: #8b949e; font-size: 0.9rem; line-height: 1.5 }
-  .compare-section { max-width: 700px; padding: 0 20px; width: 100% }
-  .compare-table { width: 100%; border-collapse: collapse; margin: 0 auto; font-size: 0.92rem }
-  .compare-table th { text-align: left; padding: 12px 16px; border-bottom: 1px solid #30363d; color: #f0f6fc }
-  .compare-table td { padding: 10px 16px; border-bottom: 1px solid #21262d }
-  .compare-table .yes { color: #56d364 }
-  .compare-table .no { color: #484f58 }
-  .bucket-section { max-width: 880px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 60px }
-  .bucket { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; text-align: center }
-  .bucket .bucket-icon { font-size: 1.6rem; margin-bottom: 6px }
-  .bucket h4 { color: #f0f6fc; font-size: 0.95rem; margin-bottom: 4px }
-  .bucket p { color: #8b949e; font-size: 0.82rem }
-  .footer { text-align: center; padding: 40px 20px; color: #484f58; font-size: 0.85rem; border-top: 1px solid #21262d; width: 100%; margin-top: 60px }
-  .footer a { color: #58a6ff }
-  .badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; margin-left: 6px }
-  .badge-pro { background: #6366f1; color: #fff }
-  .badge-free { background: #21262d; color: #8b949e }
-  @media (max-width: 700px) { .feature-grid, .bucket-section { grid-template-columns: 1fr } .compare-table { font-size: 0.82rem } }
+  :root {
+    --accent: #66827a;
+    --accent-dark: #3d5d56;
+    --accent-soft: #dce9e4;
+    --signal: #d1c56a;
+  }
+  .hero {
+    min-height: 0;
+    padding: 48px 0 56px;
+    gap: 48px;
+  }
+  h1 { margin: 12px 0 16px; }
+  .lede { max-width: 560px; }
+  .hero-actions { margin-top: 24px; }
+  .price-note { margin-top: 12px; }
+  .capture-signal {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    border: 1px solid var(--ink);
+    background: var(--surface);
+  }
+  .capture-signal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .capture-signal-status {
+    color: var(--muted);
+    font-size: .66rem;
+    letter-spacing: .08em;
+  }
+  .capture-signal-body { padding: 18px; }
+  .capture-signal-kicker {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .capture-signal-title {
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    line-height: 1.15;
+  }
+  .capture-signal-rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 0;
+  }
+  .capture-signal-rows span {
+    display: block;
+    padding: 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: .82rem;
+    font-weight: 700;
+  }
+  .capture-signal-rows small {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: .68rem;
+    font-weight: 650;
+  }
+  .capture-signal-foot {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: .78rem;
+    line-height: 1.4;
+  }
+  .prose {
+    max-width: 660px;
+    margin: 0 0 28px;
+    color: #465050;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+  .prose-tight { margin-bottom: 18px; }
+  .bound-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+  .bound-list li {
+    position: relative;
+    padding: 16px 0 16px 30px;
+    border-bottom: 1px solid var(--line);
+    color: #465050;
+    font-size: .96rem;
+    line-height: 1.5;
+  }
+  .bound-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--accent-dark);
+    font-weight: 800;
+  }
+  .bucket-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 24px;
+    border-top: 1px solid var(--ink);
+  }
+  .bucket-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .bucket-item h3 { margin: 0 0 5px; font-size: 1rem; }
+  .bucket-item p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .life-price { color: var(--accent-dark); font-weight: 750; }
+  @media (max-width: 760px) {
+    .hero { padding: 40px 0 48px; gap: 36px; }
+    .capture-signal { max-width: none; }
+    .bucket-list { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a>
+</header>
 
-<div class="hero">
-  <img class="icon" src="appicon.png" alt="LifeCapture" />
-  <h1>LifeCapture</h1>
-  <p class="sub">Screenshots. Receipts. Voice memos. Notes.<br>One inbox. Auto-sorted. On-device.</p>
-  <p class="price">Free on the App Store &nbsp;·&nbsp; Pro $9.99 one-time &nbsp;·&nbsp; <span style="color:#6366f1">Now in TestFlight</span></p>
-  <p class="anti">No subscription. No cloud uploads. Your stuff stays on your phone.</p>
-  <a class="download-btn" href="https://testflight.apple.com/join/c3bbQrbs">Join TestFlight Beta</a>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="kicker">A quieter inbox for real life</span>
+      <h1 id="hero-title">LifeCapture</h1>
+      <p class="lede">Keep screenshots, receipts, notes, and voice memos useful after the moment has passed.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://testflight.apple.com/join/c3bbQrbs">Join TestFlight beta</a>
+        <a class="button secondary" href="#workflow">See how it works</a>
+      </div>
+      <p class="price-note"><span class="life-price">Free to start · Pro $9.99 one-time</span> · On-device processing · No subscription</p>
+    </div>
+
+    <div class="capture-signal" aria-label="Illustrative LifeCapture inbox example">
+      <div class="capture-signal-header"><span>LifeCapture</span><span class="capture-signal-status">On-device</span></div>
+      <div class="capture-signal-body">
+        <p class="capture-signal-kicker">Recent capture</p>
+        <p class="capture-signal-title">Receipt from the hardware store</p>
+        <div class="capture-signal-rows">
+          <span><small>Type</small>Receipt</span>
+          <span><small>Filed under</small>Expenses</span>
+          <span><small>Source</small>Screenshot</span>
+          <span><small>Status</small>Ready to find</span>
+        </div>
+        <p class="capture-signal-foot">Illustrative example. Your captures stay on your device while LifeCapture organizes them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="workflow" aria-labelledby="workflow-heading">
+    <div class="section-heading">
+      <h2 id="workflow-heading">Capture the moment. Keep the meaning.</h2>
+      <p class="section-note">LifeCapture turns the things you save into information you can return to.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Send it in</h3>
+        <p>Share a screenshot, receipt, note, or voice memo into LifeCapture from the places you already use.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Let the device read it</h3>
+        <p>On-device OCR and speech recognition turn images and audio into information you can work with.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Choose a useful home</h3>
+        <p>Keep it in Inbox, Expenses, Projects, Tasks, Reference, or Archive, with automatic filing available.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Find it later</h3>
+        <p>Return to the capture when the receipt, task, reference, or half-formed idea matters again.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="captures" aria-labelledby="captures-heading">
+    <div class="section-heading">
+      <h2 id="captures-heading">The things that pile up around a day.</h2>
+      <p class="section-note">One place for the useful fragments that otherwise disappear into Photos, Messages, and voice memos.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Screenshots</h3>
+        <p>Bring in screenshots and keep the useful ones attached to a category instead of a camera roll.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Receipts</h3>
+        <p>Scan or import receipts and keep their text and totals available for later reference.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Voice memos</h3>
+        <p>Turn spoken reminders and rough ideas into searchable task material with on-device speech recognition.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Notes and links</h3>
+        <p>Keep the short reference material you do not want to lose but do not need to turn into a project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="buckets" aria-labelledby="buckets-heading">
+    <div class="section-heading">
+      <h2 id="buckets-heading">Six places for the mess.</h2>
+      <p class="section-note">Simple default buckets give each capture somewhere sensible to land.</p>
+    </div>
+    <div class="bucket-list">
+      <div class="bucket-item"><h3>Inbox</h3><p>New captures waiting for a home.</p></div>
+      <div class="bucket-item"><h3>Expenses</h3><p>Receipts, totals, and purchase details.</p></div>
+      <div class="bucket-item"><h3>Projects</h3><p>Work, code, designs, and active plans.</p></div>
+      <div class="bucket-item"><h3>Tasks</h3><p>Actions pulled from notes and voice memos.</p></div>
+      <div class="bucket-item"><h3>Reference</h3><p>Information worth keeping nearby.</p></div>
+      <div class="bucket-item"><h3>Archive</h3><p>Finished or quiet material you still own.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="private" aria-labelledby="private-heading">
+    <div class="section-heading">
+      <h2 id="private-heading">Private by design.</h2>
+      <p class="section-note">LifeCapture processes your captures on-device instead of sending them to a hosted AI service.</p>
+    </div>
+    <p class="prose">Screenshots, receipts, notes, and voice memos are personal by nature. LifeCapture is built to keep processing local, with no LifeCapture backend receiving your captures and no subscription required to make the app useful.</p>
+    <ul class="bound-list">
+      <li><strong>On-device OCR and speech recognition.</strong> Extract text and transcribe voice memos on the device.</li>
+      <li><strong>Local capture workflow.</strong> Import through the share sheet, camera, photos, or files and return to the app when you need the result.</li>
+      <li><strong>One-time Pro upgrade.</strong> Pro is an Apple in-app purchase, not a recurring subscription.</li>
+      <li><strong>No cloud promise theater.</strong> LifeCapture does not claim a remote service, hosted AI, or unrestricted cross-product search.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="boundaries" aria-labelledby="boundaries-heading">
+    <div class="section-heading">
+      <h2 id="boundaries-heading">Focused by design.</h2>
+      <p class="section-note">LifeCapture owns lived experience and captured context—not every kind of record.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row"><span class="feature-number">01</span><h3>LifeCapture</h3><p>Memories, photos, journals, events, voice memos, and timeline context.</p></div>
+      <div class="feature-row"><span class="feature-number">02</span><h3>Nook</h3><p>Durable personal records, sensitive vault data, contacts, cards, warranties, and local attachments.</p></div>
+      <div class="feature-row"><span class="feature-number">03</span><h3>Document Desk</h3><p>Evidence-heavy documents, page citations, obligations, comparisons, and grounded briefs.</p></div>
+    </div>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">These products remain separate. LifeCapture does not silently expose your memories to Nook or Document Desk, and future handoffs would be explicit and user-controlled.</p>
+  </section>
+
+  <section class="section"><div class="callout"><div><h2>Keep the useful parts of the day.</h2><p>Join the LifeCapture TestFlight and see whether a quieter inbox helps.</p></div><a class="button" href="https://testflight.apple.com/join/c3bbQrbs">Join TestFlight beta</a></div></section>
+
+  <section class="other-products"><h2>More from SG1 Labs</h2><div class="product-links"><a href="../nook/">Nook ↗</a><a href="../document-desk/">Document Desk ↗</a><a href="../tab-reminder/">Tab Reminder ↗</a><a href="../talkboard/">TalkBoard ↗</a><a href="https://go.sg1-labs.us/products">All products ↗</a></div></section>
+
+  <footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span>Built from an RV · <a href="privacy.html">Privacy</a></span></footer>
+</main>
 </div>
-
-<h2 class="section-title">Capture Everything. Find Anything.</h2>
-
-<div class="feature-grid">
-  <div class="feature">
-    <div class="icon-emoji">📸</div>
-    <h3>Screenshot Import</h3>
-    <p>Grab recent screenshots from Photos. Auto-classified as Projects, Reference, or Tasks.</p>
-  </div>
-  <div class="feature">
-    <div class="icon-emoji">🧾</div>
-    <h3>Receipt Scanner</h3>
-    <p>Built-in document scanner with on-device OCR. Receipts go straight to Expenses.</p>
-  </div>
-  <div class="feature">
-    <div class="icon-emoji">🎙️</div>
-    <h3>Voice Memos</h3>
-    <p>Import audio files, transcribe with on-device Speech recognition. Filed as Tasks automatically.</p>
-  </div>
-  <div class="feature">
-    <div class="icon-emoji">🤖</div>
-    <h3>AI Classifier</h3>
-    <p>On-device AI reads your captures and files them into the right bucket. No cloud. No API keys.</p>
-  </div>
-  <div class="feature">
-    <div class="icon-emoji">🔍</div>
-    <h3>Smart Search <span class="badge badge-pro">PRO</span></h3>
-    <p>"Receipt from last month" — natural language search with on-device embeddings. Find anything instantly.</p>
-  </div>
-  <div class="feature">
-    <div class="icon-emoji">📤</div>
-    <h3>Batch Export <span class="badge badge-pro">PRO</span></h3>
-    <p>Expenses → CSV for taxes. Projects → Markdown. Select, export, done.</p>
-  </div>
-</div>
-
-<h2 class="section-title">Six Smart Buckets</h2>
-
-<div class="bucket-section">
-  <div class="bucket"><div class="bucket-icon">📥</div><h4>Inbox</h4><p>Unsorted, auto-filed later</p></div>
-  <div class="bucket"><div class="bucket-icon">💳</div><h4>Expenses</h4><p>Receipts & totals</p></div>
-  <div class="bucket"><div class="bucket-icon">💻</div><h4>Projects</h4><p>Work, code, designs</p></div>
-  <div class="bucket"><div class="bucket-icon">✅</div><h4>Tasks</h4><p>Voice notes & actions</p></div>
-  <div class="bucket"><div class="bucket-icon">📖</div><h4>Reference</h4><p>Notes to keep</p></div>
-  <div class="bucket"><div class="bucket-icon">📦</div><h4>Archive</h4><p>Done & ignored</p></div>
-</div>
-
-<h2 class="section-title">Free vs Pro</h2>
-
-<div class="compare-section">
-<table class="compare-table">
-  <tr><th>Feature</th><th>Free</th><th>Pro <span class="badge badge-pro">$9.99</span></th></tr>
-  <tr><td>Screenshot import</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-  <tr><td>Receipt scanner + OCR</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-  <tr><td>Voice memo transcription</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-  <tr><td>AI auto-classifier</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-  <tr><td>6 default buckets</td><td class="yes">✅</td><td class="yes">✅</td></tr>
-  <tr><td>Custom buckets + rules</td><td class="no">—</td><td class="yes">✅</td></tr>
-  <tr><td>Smart Search (NL + embeddings)</td><td class="no">—</td><td class="yes">✅</td></tr>
-  <tr><td>Batch select + export</td><td class="no">—</td><td class="yes">✅</td></tr>
-  <tr><td>Export CSV / Markdown</td><td class="no">—</td><td class="yes">✅</td></tr>
-  <tr><td>Auto-reminders</td><td class="no">—</td><td class="yes">✅</td></tr>
-  <tr><td>Widgets</td><td class="no">—</td><td class="yes">✅</td></tr>
-</table>
-</div>
-
-<div class="footer">
-  Made by <a href="https://sg1-labs.us">SG1 Labs</a> · <a href="privacy.html">Privacy</a> · Built from an RV 🚐<br>
-  <a href="https://gardnerscot.github.io/cola-pages/products/">← Back to all products</a>
-</div>
-
 </body>
 </html>
