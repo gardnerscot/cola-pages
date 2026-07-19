@@ -111,20 +111,20 @@
     border-top: 1px solid var(--ink);
   }
   .bound-list li {
-    display: grid;
-    grid-template-columns: 18px 1fr;
-    gap: 12px;
-    align-items: start;
-    padding: 16px 0;
+    position: relative;
+    padding: 16px 0 16px 30px;
     border-bottom: 1px solid var(--line);
     color: #465050;
     font-size: .96rem;
+    line-height: 1.5;
   }
   .bound-list li::before {
     content: "–";
+    position: absolute;
+    left: 0;
+    top: 16px;
     color: var(--accent-dark);
     font-weight: 800;
-    line-height: 1.4;
   }
 
   .prose {
