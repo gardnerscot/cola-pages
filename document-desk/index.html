@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Desk — Grounded Document Briefs and Comparisons | SG1 Labs</title>
+<meta name="description" content="Document Desk helps you build grounded document briefs, compare revisions, preserve page citations, and review obligations, deadlines, fees, and risks.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/document-desk/">
+<link rel="stylesheet" href="../product-pages.css">
+<style>
+  :root {
+    --accent: #4f7c6e;
+    --accent-dark: #2f554a;
+    --accent-soft: #dceae4;
+    --signal: #c5d96a;
+  }
+  /* Compact hero so the next section peeks into the first viewport */
+  .hero {
+    min-height: 0;
+    padding: 48px 0 56px;
+    gap: 48px;
+  }
+  h1 { margin: 12px 0 16px; }
+  .lede { max-width: 540px; }
+  .hero-actions { margin-top: 24px; }
+  .price-note { margin-top: 12px; }
+
+  /* Restrained product signal — evidence first, interpretation second */
+  .evidence-signal {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    border: 1px solid var(--ink);
+    background: var(--surface);
+    padding: 0;
+    transform: none;
+  }
+  .evidence-signal-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--accent-soft);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+  }
+  .evidence-signal-body { padding: 18px; }
+  .evidence-signal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .evidence-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--ink);
+  }
+  .evidence-quote {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border-left: 3px solid var(--accent-dark);
+    background: var(--paper);
+    color: #465050;
+    font-size: .95rem;
+    line-height: 1.45;
+  }
+  .evidence-quote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: .72rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .evidence-layer {
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+  }
+  .evidence-layer-label {
+    margin: 0 0 6px;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .evidence-layer p {
+    margin: 0;
+    color: var(--ink);
+    font-size: .9rem;
+    font-weight: 650;
+  }
+
+  /* Honest boundary list */
+  .bound-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+  .bound-list li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    color: #465050;
+    font-size: .96rem;
+  }
+  .bound-list li::before {
+    content: "–";
+    color: var(--accent-dark);
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .prose {
+    max-width: 640px;
+    margin: 0 0 28px;
+    color: #465050;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+  .prose-tight { margin-bottom: 18px; }
+
+  @media (max-width: 760px) {
+    .hero { padding: 40px 0 48px; gap: 36px; }
+    .evidence-signal { max-width: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="kicker">Private document workspace</span>
+      <h1 id="hero-title">Document Desk</h1>
+      <p class="lede">A private, evidence-grounded workspace for understanding documents, comparing revisions, and keeping important obligations attached to the source.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+        <a class="button secondary" href="#workflow">See how it works</a>
+      </div>
+      <p class="price-note">Evidence stays on the page · Interpretation stays beneath it</p>
+    </div>
+
+    <div class="evidence-signal" aria-label="Product signal: source evidence with page citation and review layer">
+      <div class="evidence-signal-header">Source evidence</div>
+      <div class="evidence-signal-body">
+        <div class="evidence-signal-meta">
+          <span class="evidence-chip">Page 12</span>
+          <span class="evidence-chip">Grounded claim</span>
+        </div>
+        <blockquote class="evidence-quote">
+          “Payment is due within thirty days.”
+          <cite>Quote from the source document</cite>
+        </blockquote>
+        <div class="evidence-layer">
+          <p class="evidence-layer-label">Then, if you ask</p>
+          <p>Review important items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="section" id="workflow" aria-labelledby="workflow-heading">
+    <div class="section-heading">
+      <h2 id="workflow-heading">From document to decision-ready brief.</h2>
+      <p class="section-note">Import, ground, compare, and review—without replacing the original record.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Import the document</h3>
+        <p>Import a text-based PDF and keep the document identity attached to the work.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Extract grounded evidence</h3>
+        <p>Organize page-aware text, source quotes, and structured claims.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Compare what changed</h3>
+        <p>See additions, removals, changed values, unchanged meaning, and possible extraction differences.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Review what matters</h3>
+        <p>Use a focused PCC review to identify obligations, deadlines, fees, and risks without changing the underlying evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence -->
+  <section class="section" id="evidence" aria-labelledby="evidence-heading">
+    <div class="section-heading">
+      <h2 id="evidence-heading">Every important answer should point back to the page.</h2>
+      <p class="section-note">Citations stay visible. Quotes stay attached. The source remains the record.</p>
+    </div>
+    <p class="prose">Document Desk keeps document name, page number, source quote, evidence identity, clause or topic identity, and review status with the work you are looking at.</p>
+    <p class="prose prose-tight">The evidence remains the record. Automated interpretation is shown separately so you can inspect the source before trusting the conclusion.</p>
+    <ul class="bound-list">
+      <li>Document name stays attached to each claim and comparison row.</li>
+      <li>Page numbers and source quotes remain inspectable, not buried.</li>
+      <li>Evidence and clause identities keep related items paired over revisions.</li>
+      <li>Review status is labeled so interpretation is never mistaken for the source.</li>
+    </ul>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section" id="comparison" aria-labelledby="comparison-heading">
+    <div class="section-heading">
+      <h2 id="comparison-heading">Compare revisions without losing clause identity.</h2>
+      <p class="section-note">Structured brief-to-brief comparison—not a black-box rewrite of the contract.</p>
+    </div>
+    <p class="prose">Document Desk pairs claims by identity so numbers and rights stay on the correct legal slot. It is built to surface change, not invent legal conclusions.</p>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Dates stay with dates</h3>
+        <p>Effective dates stay paired with effective dates across baseline and revision.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Roles stay distinct</h3>
+        <p>Provider and client obligations stay distinct instead of collapsing into one mixed claim.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>Termination types stay separate</h3>
+        <p>Termination notice periods are not merged with unrelated termination rights.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">04</span>
+        <h3>Noise is labeled</h3>
+        <p>Wording-only changes can be separated from substantive changes. Extraction differences are surfaced instead of silently presented as facts.</p>
+      </div>
+    </div>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">This is not perfect legal analysis. It is a grounded way to see what moved, what stayed, and what still needs a human read.</p>
+  </section>
+
+  <!-- PCC -->
+  <section class="section" id="pcc" aria-labelledby="pcc-heading">
+    <div class="section-heading">
+      <h2 id="pcc-heading">A focused review layer, when Apple Private Cloud Compute is available.</h2>
+      <p class="section-note">Interpretation beneath evidence—not a replacement for it.</p>
+    </div>
+    <p class="prose">Document Desk can send only selected, relevant grounded excerpts to Apple Private Cloud Compute for a concise review of important obligations, deadlines, fees, and risks.</p>
+    <ul class="bound-list">
+      <li><strong>User-triggered.</strong> Review runs only when you ask—not in the background by default.</li>
+      <li><strong>Selected excerpts only.</strong> Full unrelated documents are not sent. Only the grounded claims chosen for the request.</li>
+      <li><strong>Source evidence unchanged.</strong> Citations, quotes, pages, and clause identities stay as they were.</li>
+      <li><strong>Interpretation beneath evidence.</strong> PCC output appears as a separate layer under the grounded brief or comparison.</li>
+      <li><strong>Clear unavailable state.</strong> When Private Cloud Compute cannot be used, Document Desk fails clearly and leaves the grounded result alone.</li>
+    </ul>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">Availability depends on device, OS, and Apple’s Private Cloud Compute path. Document Desk does not claim the review layer works on every device.</p>
+  </section>
+
+  <!-- Product boundaries -->
+  <section class="section" id="boundaries" aria-labelledby="boundaries-heading">
+    <div class="section-heading">
+      <h2 id="boundaries-heading">Focused by design.</h2>
+      <p class="section-note">Separate products. Separate jobs. No unrestricted cross-product access by default.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row">
+        <span class="feature-number">01</span>
+        <h3>Document Desk</h3>
+        <p>Owns documents, citations, obligations, comparisons, and grounded briefs.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">02</span>
+        <h3>Nook</h3>
+        <p>Owns durable personal records and sensitive vault data.</p>
+      </div>
+      <div class="feature-row">
+        <span class="feature-number">03</span>
+        <h3>LifeCapture</h3>
+        <p>Owns memories, photos, journals, and timeline context.</p>
+      </div>
+    </div>
+    <p class="prose" style="margin-top:28px;margin-bottom:0;">These products remain separate. Document Desk is not generic AI chat, not a universal Hearth search surface, and does not invent legal conclusions or overwrite source evidence.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="callout">
+      <div>
+        <h2 id="cta-heading">Know what changed before you act.</h2>
+        <p>Understand what your documents say, what changed, and what deserves attention—without losing the evidence.</p>
+      </div>
+      <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+    </div>
+  </section>
+
+  <section class="other-products">
+    <h2>More from SG1 Labs</h2>
+    <div class="product-links">
+      <a href="https://go.sg1-labs.us/products">All products ↗</a>
+      <a href="../lifecapture/">LifeCapture</a>
+      <a href="../tab-reminder/">Tab Reminder</a>
+      <a href="../agentx/">AgentX</a>
+      <a href="../support/">Support</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="https://sg1-labs.us">Made by SG1 Labs</a>
+    <span>
+      <a href="https://go.sg1-labs.us/products">Products</a>
+      ·
+      <a href="../support/">Support</a>
+    </span>
+  </footer>
+</main>
+</div>
+</body>
+</html>
