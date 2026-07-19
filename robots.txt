@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gardnerscot.github.io/cola-pages/sitemap.xml
