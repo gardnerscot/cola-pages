@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free SEO for Indie Hackers: A Weekly Workflow Without Ahrefs</title>
+<meta name="description" content="A practical free SEO workflow for indie hackers: find keyword ideas, fix one page, and build a weekly Google Search Console habit without paying $129 a month.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/talkboard/free-seo-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Free SEO for Indie Hackers: A Weekly Workflow Without Ahrefs">
+<meta property="og:description" content="Find useful keywords, improve one page, and build a weekly SEO habit with free tools.">
+<meta property="og:url" content="https://gardnerscot.github.io/cola-pages/talkboard/free-seo-guide.html">
+<style>
+:root { --ink:#17201f; --muted:#586461; --paper:#f7f7f2; --surface:#fff; --line:#d8ddd7; --accent:#b65d36; --accent-dark:#7c371e; --signal:#d9c76a; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.65; }
+a { color:var(--accent-dark); text-decoration-thickness:1px; text-underline-offset:3px; }
+a:hover { color:var(--accent); }
+.page { max-width:1060px; margin:0 auto; padding:24px 24px 76px; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:4px 0 42px; border-bottom:1px solid var(--line); }
+.brand { color:var(--ink); font-size:.84rem; font-weight:800; letter-spacing:.12em; text-decoration:none; text-transform:uppercase; }
+.brand span { color:var(--muted); font-weight:600; }
+.header-link { color:var(--muted); font-size:.88rem; }
+.article { max-width:760px; margin:0 auto; }
+.breadcrumb { margin:34px 0 22px; color:var(--muted); font-size:.84rem; }
+.eyebrow { margin:0 0 14px; color:var(--accent-dark); font-size:.74rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+h1 { max-width:720px; margin:0; font-size:clamp(2.45rem, 6vw, 4.7rem); letter-spacing:0; line-height:1.02; }
+.dek { max-width:650px; margin:24px 0 14px; color:#3e4b47; font-size:1.2rem; line-height:1.5; }
+.meta { margin:0 0 38px; color:var(--muted); font-size:.86rem; }
+.toc { margin:0 0 46px; padding:20px 22px; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); background:var(--surface); }
+.toc strong { display:block; margin-bottom:8px; }
+.toc a { display:block; margin:5px 0; font-size:.94rem; }
+.intro { font-size:1.12rem; }
+h2 { margin:58px 0 16px; font-size:1.9rem; line-height:1.16; letter-spacing:0; }
+h3 { margin:30px 0 8px; font-size:1.2rem; line-height:1.3; }
+p { margin:0 0 18px; }
+ul, ol { margin:0 0 22px; padding-left:25px; }
+li { margin:8px 0; }
+.callout { margin:28px 0; padding:22px 24px; border-left:4px solid var(--accent); background:#eeeadd; }
+.callout p:last-child { margin-bottom:0; }
+.workflow { margin:24px 0 28px; border-top:1px solid var(--ink); }
+.step { display:grid; grid-template-columns:58px 1fr; gap:18px; padding:20px 0; border-bottom:1px solid var(--line); }
+.step-number { color:var(--accent-dark); font-size:1.35rem; font-weight:800; }
+.step h3 { margin:0 0 7px; }
+.step p { margin:0; color:#46514e; }
+.rule { display:grid; grid-template-columns:180px 1fr; gap:20px; padding:14px 0; border-bottom:1px solid var(--line); }
+.rule strong { color:var(--accent-dark); }
+.checklist { margin:24px 0; padding:0; list-style:none; border-top:1px solid var(--ink); }
+.checklist li { position:relative; margin:0; padding:13px 0 13px 29px; border-bottom:1px solid var(--line); }
+.checklist li::before { content:"✓"; position:absolute; left:0; color:var(--accent-dark); font-weight:800; }
+.code { display:block; overflow:auto; margin:10px 0 22px; padding:14px 16px; background:#1d2826; color:#e8eee7; font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.88rem; }
+.cta { margin:60px 0 42px; padding:30px; border:1px solid var(--ink); background:var(--surface); }
+.cta h2 { margin:0 0 9px; font-size:1.65rem; }
+.cta p { color:#46514e; }
+.button { display:inline-block; margin-top:8px; padding:12px 18px; background:var(--accent); color:#fff; font-weight:800; text-decoration:none; }
+.button:hover { background:var(--accent-dark); color:#fff; }
+.faq { padding-top:6px; }
+.faq h3 { padding-top:17px; border-top:1px solid var(--line); }
+.related { margin-top:55px; padding-top:22px; border-top:1px solid var(--ink); }
+.related a { margin-right:22px; }
+.footer { display:flex; justify-content:space-between; gap:20px; margin-top:50px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+@media (max-width:680px) { .page { padding:18px 18px 52px; } .site-header { padding-bottom:28px; } .header-link { font-size:.8rem; } h1 { font-size:2.7rem; } .step, .rule { grid-template-columns:1fr; gap:4px; } .cta { padding:23px; } .footer { display:block; } .footer span { display:block; margin-top:8px; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Free SEO for Indie Hackers: A Weekly Workflow Without Ahrefs",
+  "description":"A practical free SEO workflow for indie hackers using free tools and one weekly habit.",
+  "author":{"@type":"Person","name":"Scot Gardner"},
+  "publisher":{"@type":"Organization","name":"SG1 Labs"},
+  "datePublished":"2026-07-22",
+  "dateModified":"2026-07-22",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://gardnerscot.github.io/cola-pages/talkboard/free-seo-guide.html"}
+}
+</script>
+</head>
+<body>
+<div class="page">
+<header class="site-header"><a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a><a class="header-link" href="index.html">TalkBoard ↗</a></header>
+<main class="article">
+<nav class="breadcrumb"><a href="../index.html">TalkBoard</a> / Free SEO guide</nav>
+<p class="eyebrow">The indie hacker SEO playbook</p>
+<h1>Free SEO for Indie Hackers: A Weekly Workflow Without Ahrefs</h1>
+<p class="dek">You do not need a $129 monthly SEO dashboard to improve one useful page at a time. You need a way to find real search language, fix the page, and come back next week.</p>
+<p class="meta">By Scot Gardner · SG1 Labs · Updated July 22, 2026 · 8-minute read</p>
+
+<div class="toc"><strong>In this guide</strong><a href="#gap">The free-tool gap</a><a href="#keywords">1. Find keyword ideas from real demand</a><a href="#page">2. Fix the page before chasing more keywords</a><a href="#habit">3. Build one weekly SEO habit</a><a href="#checklist">The 20-minute weekly checklist</a><a href="#talkboard">Where TalkBoard fits</a></div>
+
+<p class="intro">Most indie hackers do not have an SEO problem because they lack a $129 tool. They have an SEO problem because they publish once, glance at traffic once, and never turn what they learn into the next page improvement.</p>
+<p>This workflow uses Google Search Console, Google itself, a spreadsheet, and one repeatable weekly review. It will not replace every feature in Ahrefs or Semrush. It will give you a useful signal loop without adding another subscription before your product has earned it.</p>
+
+<h2 id="gap">The gap between free Search Console and paid SEO tools</h2>
+<p>Paid SEO platforms package keyword databases, competitor research, rank tracking, link indexes, and reporting into one interface. That is useful when you manage many sites or need scale. It is not a prerequisite for a focused product site.</p>
+<p>For an indie hacker, the first question is smaller: <strong>Which page could earn a better click from a person already searching for this problem?</strong> Search Console can answer that. Google can help you understand the language around it. Your own product and customer conversations supply the missing context.</p>
+<div class="callout"><p><strong>Use paid SEO tools when they remove a real bottleneck.</strong> Until then, spend 20 minutes each week improving a page that already has impressions. A spreadsheet with a decision is more valuable than a dashboard you never open.</p></div>
+
+<h2 id="keywords">1. Find keyword ideas from real demand</h2>
+<p>Start with language that already exists. Do not begin by inventing a heroic list of 500 keywords. Find one problem your product solves, then collect the phrases people use around that problem.</p>
+<div class="workflow">
+<div class="step"><div class="step-number">01</div><div><h3>Mine Google Search Console</h3><p>Open <strong>Performance → Search results</strong>. Filter to queries or pages, then export the last three months. Look for queries with impressions but few clicks. Those are not failures; they are pages Google is already testing.</p></div></div>
+<div class="step"><div class="step-number">02</div><div><h3>Expand the wording in Google</h3><p>Search the phrase in an incognito window. Read autocomplete, People also ask, and related searches. Record the wording that describes the searcher's job, not just the wording that describes your feature.</p></div></div>
+<div class="step"><div class="step-number">03</div><div><h3>Check the conversation</h3><p>Search Reddit, Indie Hackers, support tickets, and customer calls for the same problem. Save phrases that sound natural. “Free SEO for indie hackers” is a better starting point than an internal label like “growth acquisition workflow.”</p></div></div>
+<div class="step"><div class="step-number">04</div><div><h3>Choose one page and one intent</h3><p>Pick the query where you can give the clearest answer. Keep a simple sheet with the query, page URL, intent, current impressions, and the change you plan to make.</p></div></div>
+</div>
+<p>A useful keyword idea passes three tests:</p>
+<ul><li>A real person would type or say it.</li><li>Your page can answer it better than a generic definition.</li><li>The answer naturally leads to the problem your product solves.</li></ul>
+
+<h2 id="page">2. Fix the page before chasing more keywords</h2>
+<p>On-page SEO is mostly a clarity exercise. A search engine should be able to understand the page quickly, and a human should know within seconds whether the page is for them.</p>
+<div class="rule"><strong>Title</strong><span>Put the primary topic near the front and make the promise specific. “Free SEO for Indie Hackers” is clearer than “Our Growth Philosophy.”</span></div>
+<div class="rule"><strong>Opening answer</strong><span>Answer the searcher's question in the first few paragraphs. Do not force readers through a product history lesson before helping them.</span></div>
+<div class="rule"><strong>Headings</strong><span>Use headings that describe the next question: how to find ideas, how to fix a page, and what to do every week.</span></div>
+<div class="rule"><strong>Evidence</strong><span>Show examples, screenshots, numbers from your own workflow, or the actual checklist. Specificity is harder to copy than generic advice.</span></div>
+<div class="rule"><strong>Internal links</strong><span>Link to the product page and to related guides using descriptive anchor text. Help readers and crawlers understand how the pages connect.</span></div>
+<div class="rule"><strong>Call to action</strong><span>Offer the next logical step after the answer. The CTA should solve the repeated work the reader just learned to do.</span></div>
+<p>Before publishing, check the page on a phone. If the title wraps awkwardly, the first answer is buried, or the CTA feels like an interruption, fix the reading experience before touching the keyword list.</p>
+
+<h2 id="habit">3. Build one weekly SEO habit</h2>
+<p>SEO becomes manageable when the unit of work is one page and one decision. Pick a recurring day. Review the same small set of data. Make one meaningful change. Record it so you can learn from the result.</p>
+<ol><li>Review the last 28 days in Search Console.</li><li>Sort pages by impressions and find one page with an opportunity.</li><li>Compare its title and opening to the actual query language.</li><li>Make one change: title, opening, heading, example, internal link, or missing section.</li><li>Write down the date, query, page, and change.</li><li>Wait long enough to collect data, then compare the next period.</li></ol>
+<p>Do not rewrite ten things at once. You want to know what helped. SEO is slow feedback, so make the experiment small enough that you can remember what you changed.</p>
+
+<h2 id="checklist">The 20-minute weekly checklist</h2>
+<ul class="checklist"><li>Open Search Console and set the date range to the last 28 days.</li><li>Find one page with impressions and a lower-than-expected click-through rate.</li><li>Read the top queries for that page out loud.</li><li>Check whether the title says what the searcher is looking for.</li><li>Make one on-page improvement.</li><li>Add one internal link from a relevant page.</li><li>Record the change in a simple spreadsheet.</li><li>Choose the page you will review next week.</li></ul>
+<p>A spreadsheet is enough. Use columns for <strong>date</strong>, <strong>page</strong>, <strong>query</strong>, <strong>impressions</strong>, <strong>clicks</strong>, <strong>change</strong>, and <strong>next review</strong>.</p>
+<code class="code">2026-07-22 | /free-seo-guide | free seo for indie hackers | 84 impressions | 3 clicks | clarified title + added weekly checklist | 2026-08-05</code>
+
+<h2 id="talkboard">Where TalkBoard fits</h2>
+<p>The hard part is not understanding the checklist. It is capturing the rough observations that appear while you are doing the work: a phrase from a customer call, a better title you thought of while walking, or a competitor example you copied for later.</p>
+<p>TalkBoard is the automated version of that small workflow around your Mac: dictate the rough thought, polish the sentence, and find the useful snippet again from clipboard history. It is not an SEO database, and it does not pretend to replace Search Console. It helps you move from scattered notes to a page you can actually ship.</p>
+<div class="cta"><h2>Turn the weekly SEO habit into finished copy.</h2><p>TalkBoard puts on-device dictation, focused text polish, and clipboard history in one Mac utility. One-time purchase, no recurring SEO-tool bill.</p><a class="button" href="https://scotlab.gumroad.com/l/talkboard">Try TalkBoard for $9.99</a></div>
+
+<div class="faq"><h2>FAQ</h2><h3>Can I do SEO without Ahrefs?</h3><p>Yes. Google Search Console, Google search results, your product analytics, and customer language are enough to run a focused weekly improvement loop. Paid tools become valuable when you need larger-scale competitor or backlink research.</p><h3>What should I do if my site has no Search Console data?</h3><p>Start with customer language and Google autocomplete, publish one genuinely useful page, verify the site in Search Console, and use the first impressions as your initial feedback. No data means you need a first page, not a bigger keyword list.</p><h3>How long should I wait before judging a change?</h3><p>Use enough time to collect meaningful impressions. Two to four weeks is a reasonable starting window for a small site, but seasonality, site authority, and query volume matter. Record the change rather than guessing from one noisy day.</p><h3>Should every page target a keyword?</h3><p>Every useful page should have a clear job, but not every page needs to chase a separate keyword. Avoid making thin pages just to fill a spreadsheet. One strong answer is better than ten near-duplicates.</p></div>
+
+<div class="related"><strong>Continue with TalkBoard:</strong> <a href="index.html">See the Mac utility</a> <a href="indie-hackers.html">Compare the subscription stack</a></div>
+<footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span>TalkBoard · <a href="https://go.sg1-labs.us/products">All products ↗</a></span></footer>
+</main>
+</div>
+</body>
+</html>
