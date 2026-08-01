@@ -37,7 +37,7 @@
 <ul>
   <li>Sync traffic stays on your local Wi-Fi network and never passes through SG1 Labs servers</li>
   <li>Devices are paired by you, and pairing is managed in the app</li>
-  <li>Sync is unencrypted on the local network; anyone on your network can technically observe it</li>
+  <li>Sync frames are encrypted (AES-GCM) with a key established during pairing; only your paired devices can read them</li>
   <li>Deleting a capture on one device is treated as a local deletion and does not erase it from other devices</li>
 </ul>
 <p>You can disable Device Sync at any time; all features except cross-device sync keep working.</p>
