@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniChat — A Focused Mac Assistant for Questions and Actions | SG1 Labs</title>
+<meta name="description" content="OmniChat is a focused assistant for questions, tools, and grounded actions. A Mac version is in development, with local Hearth context designed around explicit boundaries.">
+<link rel="canonical" href="https://gardnerscot.github.io/cola-pages/omnichat/">
+<link rel="icon" href="assets/omnichat-icon.png" type="image/png">
+<link rel="stylesheet" href="../product-pages.css">
+<style>
+  :root {
+    --accent: #4778a7;
+    --accent-dark: #285477;
+    --accent-soft: #dceaf4;
+    --signal: #e7bf4f;
+    --panel: #eef3f6;
+  }
+  .hero { min-height: 0; padding: 56px 0 72px; gap: 64px; }
+  h1 { margin: 12px 0 18px; }
+  .lede { max-width: 570px; }
+  .hero-actions { margin-top: 26px; }
+  .price-note { margin-top: 12px; }
+  .app-signal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    border: 1px solid var(--ink);
+    background: var(--panel);
+    box-shadow: 12px 12px 0 var(--accent-soft);
+  }
+  .app-bar { display: flex; align-items: center; gap: 9px; padding: 12px 15px; border-bottom: 1px solid var(--line); background: var(--surface); }
+  .app-dot { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; background: var(--signal); }
+  .app-bar strong { margin-left: 5px; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; }
+  .app-body { padding: 24px; }
+  .app-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .app-brand img { width: 40px; height: 40px; border-radius: 9px; }
+  .app-brand span { display: block; color: var(--muted); font-size: .74rem; }
+  .app-brand strong { display: block; font-size: 1.05rem; }
+  .query-label { margin: 0 0 8px; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .query { margin: 0; font-size: 1.28rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.16; }
+  .answer { margin-top: 22px; padding: 16px; border-left: 3px solid var(--accent); background: var(--surface); }
+  .answer strong { display: block; margin-bottom: 8px; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+  .answer p { margin: 0; color: #465050; font-size: .9rem; line-height: 1.5; }
+  .app-foot { padding: 13px 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .73rem; }
+  .prose { max-width: 660px; margin: 0 0 28px; color: #465050; font-size: 1.02rem; line-height: 1.55; }
+  .bound-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+  .bound-list li { position: relative; padding: 16px 0 16px 30px; border-bottom: 1px solid var(--line); color: #465050; font-size: .96rem; line-height: 1.5; }
+  .bound-list li::before { content: "–"; position: absolute; left: 0; top: 16px; color: var(--accent-dark); font-weight: 800; }
+  .status-line { display: inline-block; margin-top: 18px; padding: 6px 9px; border: 1px solid var(--accent-dark); color: var(--accent-dark); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  @media (max-width: 760px) {
+    .hero { padding: 42px 0 58px; gap: 40px; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .hero-actions .button { width: 100%; }
+    .app-signal { box-shadow: 7px 7px 0 var(--accent-soft); }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+<header class="site-header">
+  <a class="brand" href="https://sg1-labs.us">SG1 <span>Labs</span></a>
+  <a class="header-link" href="https://go.sg1-labs.us/products">All products <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="kicker">Focused assistant · Mac in development</span>
+      <h1 id="hero-title">OmniChat</h1>
+      <p class="lede">A practical question-and-action surface for the things already on your devices—grounded in the tools and records you explicitly choose.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+        <a class="button secondary" href="#boundaries">See the boundaries</a>
+      </div>
+      <p class="price-note">iPad app today · Mac app in development · No unrestricted vault search</p>
+      <span class="status-line">Mac target being built</span>
+    </div>
+
+    <div class="app-signal" aria-label="Illustrative OmniChat Mac question and grounded answer">
+      <div class="app-bar"><span class="app-dot"></span><span class="app-dot"></span><span class="app-dot"></span><strong>OmniChat · Hearth</strong></div>
+      <div class="app-body">
+        <div class="app-brand"><img src="assets/omnichat-icon.png" alt="OmniChat app icon"><div><strong>Ask a useful question</strong><span>Mac-first local context</span></div></div>
+        <p class="query-label">Question</p>
+        <p class="query">Which of my appliances are still under warranty?</p>
+        <div class="answer"><strong>Grounded answer</strong><p>KitchenAid Mixer · warranty ends Jan 15, 2027. One coverage note needs verification before relying on the duration.</p></div>
+      </div>
+      <div class="app-foot">Source: Nook warranty record · interpretation stays separate</div>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-heading">
+    <div class="section-heading">
+      <h2 id="work-heading">Useful context, when you ask for it.</h2>
+      <p class="section-note">OmniChat is a surface for deliberate actions—not a license to search everything.</p>
+    </div>
+    <p class="prose">OmniChat brings questions, tools, and grounded answers into one focused place. The Mac direction adds a local context layer for Hearth products while keeping each product’s data and responsibility separate.</p>
+    <div class="feature-list">
+      <div class="feature-row"><span class="feature-number">01</span><h3>Ask a narrow question</h3><p>Start with a real task, such as checking which appliances still have an active warranty.</p></div>
+      <div class="feature-row"><span class="feature-number">02</span><h3>Choose the source</h3><p>Retrieval is permission-scoped. A product returns a structured result, not an unrestricted database handle.</p></div>
+      <div class="feature-row"><span class="feature-number">03</span><h3>Keep evidence attached</h3><p>Source identity, local references, dates, and uncertainty warnings remain visible beside the answer.</p></div>
+      <div class="feature-row"><span class="feature-number">04</span><h3>Take the next action</h3><p>Use the result to follow up, verify a detail, or return to the source product with the right context.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="mac" aria-labelledby="mac-heading">
+    <div class="section-heading">
+      <h2 id="mac-heading">The Mac version starts at the boundary.</h2>
+      <p class="section-note">Local transport first. Cross-product reach only through explicit contracts.</p>
+    </div>
+    <p class="prose">The first Mac workflow connects OmniChat to Nook’s bounded warranty retrieval slice. Nook remains the source of truth, and OmniChat receives only the fields needed for the question. The architecture is being built around a local Mac process boundary rather than cloud sync or a hidden shared database.</p>
+    <ul class="bound-list">
+      <li><strong>Nook stays Mac-only.</strong> Its local vault remains on the Mac and is not exposed to the iOS app.</li>
+      <li><strong>Retrieval is explicit.</strong> The first contract covers warranty records and active coverage only.</li>
+      <li><strong>Sensitive values stay out.</strong> Secrets, cards, passwords, Keychain values, unrelated records, and attachment bytes do not cross the boundary.</li>
+      <li><strong>Uncertainty survives.</strong> Conflicting dates or coverage notes appear as warnings instead of becoming confident fiction.</li>
+      <li><strong>No false bridge.</strong> iOS OmniChat does not claim access to the Mac vault while a real Mac transport is still being built.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="products" aria-labelledby="products-heading">
+    <div class="section-heading">
+      <h2 id="products-heading">Part of a deliberately separate system.</h2>
+      <p class="section-note">Different kinds of context deserve different owners.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-row"><span class="feature-number">01</span><h3>OmniChat</h3><p>Owns the question-and-action surface and preserves grounded source context.</p></div>
+      <div class="feature-row"><span class="feature-number">02</span><h3>Nook</h3><p>Owns durable personal records, sensitive vault data, warranties, receipts, and local attachments.</p></div>
+      <div class="feature-row"><span class="feature-number">03</span><h3>Document Desk</h3><p>Owns evidence-heavy documents, citations, comparisons, obligations, and grounded briefs.</p></div>
+      <div class="feature-row"><span class="feature-number">04</span><h3>Recallary</h3><p>Owns lived experience, screenshots, photos, voice memos, and timeline context.</p></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="callout">
+      <div><h2 id="cta-heading">Ask better questions of your own context.</h2><p>OmniChat is moving to Mac with explicit local boundaries and a useful first workflow.</p></div>
+      <a class="button" href="https://go.sg1-labs.us/products">Request early access</a>
+    </div>
+  </section>
+
+  <section class="other-products">
+    <h2>More from SG1 Labs</h2>
+    <div class="product-links">
+      <a href="https://go.sg1-labs.us/products">All products ↗</a>
+      <a href="../nook/">Nook</a>
+      <a href="../document-desk/">Document Desk</a>
+      <a href="../recallary/">Recallary</a>
+      <a href="../talkboard/">TalkBoard</a>
+      <a href="../support/">Support</a>
+    </div>
+  </section>
+
+  <footer class="footer"><a href="https://sg1-labs.us">Made by SG1 Labs</a><span><a href="https://go.sg1-labs.us/products">Products</a> · <a href="../support/">Support</a></span></footer>
+</main>
+</div>
+</body>
+</html>
