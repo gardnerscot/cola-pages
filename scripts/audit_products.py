@@ -39,6 +39,11 @@ def sh_curl(url, head=False):
     code, _, final = out.partition("|")
     return code, final
 
+# hub display names whose go.* slug differs from the naive lowercased name
+SLUG_OVERRIDES = {
+    "Trial Guard": "trialguard",
+}
+
 def parse_hub():
     """Return [{slug, name, status, link}] from products/index.html rows."""
     html = HUB.read_text(encoding="utf-8")
@@ -53,7 +58,7 @@ def parse_hub():
         name = name_m.group(1).strip()
         link = link_m.group(1)
         slug = re.search(r"\.\./([a-z0-9-]+)/", link)
-        slug = slug.group(1) if slug else name.lower().replace(" ", "-")
+        slug = slug.group(1) if slug else SLUG_OVERRIDES.get(name, name.lower().replace(" ", "-"))
         rows.append({"slug": slug, "name": name, "status": status, "link": link})
     return rows
 
