@@ -12,6 +12,6 @@
 - Do NOT create a new repo for page deploys. Everything lives in `cola-pages` (public, required for Pages).
 
 ## Context
-- Live root: https://gardnerscot.github.io/cola-pages/
+- Live root: https://pages.sg1-labs.us/
 - sitemap.xml and robots.txt live in the repo root and are served as-is.
 - Relative paths (`../../product-pages.css`) are required — Pages serves from the repo root path.
